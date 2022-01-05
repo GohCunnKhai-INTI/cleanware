@@ -2,6 +2,7 @@
 <html>
 <body>
 
+<h1>Hello, my name is <span id="name"></span></h1>
 
 <script>
 var queryString = location.search.substring(1);
@@ -11,14 +12,13 @@ var value2 = a[1];
 
 if (value1 == "SAFETYWARE Instant Gel Hand Sanitizer") {
 
+     let name = value1;
+    document.getElementById("name").innerHTML = name;
 
-  </script>
-  <b>aa</b>
-<script>
 }else{
-</script>
-<b>p</b>
-<script>
+
+     let name = "no";
+    document.getElementById("name").innerHTML = name;
 }
 </script>
 
