@@ -2,7 +2,6 @@
 <html>
 <body>
 
-<h2>JavaScript</h2>
 
 <script>
 var queryString = location.search.substring(1);
@@ -12,6 +11,14 @@ if (queryString == SAFETYWARE Instant Gel Hand Sanitizer) {
   </script>
   <b>Hi</b>
   
+<script>
+}
+else
+{
+</script>
+
+<b>h</b>
+
 <script>
 }
 </script>
