@@ -1,29 +1,520 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <link rel="icon" type="image/x-icon" href="images/clean-logo.png">
+    <title>Cleanware</title>
+
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
+      
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- main css -->
+    <link href="style.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    
+    <!-- Slider -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet"> 
+      
+    <!-- lightbox -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+
+  </head>
+  
+ <style>
+  .ln2{
+    height:25px;
+  }
+  .ml{
+  margin-left:385px;
+  margin-top:70px;
+  width:1550px;
+  }
+  .m2{
+  margin-left:800px;
+  margin-top:70px;
+  width:1550px;
+  }
+  .prd{
+	  background-color:#DCDCDC;
+  }
+  .prd2{
+	  padding:12px;
+
+  }
+  .wrap{
+     width: 1050px;
+	 height: 380px;
+
+    overflow: hidden;
+  }
+  .ibg{
+    margin-left:100px;
+	margin-top:6px;
+	float:left;
+
+  }
+  .ibg2{
+      margin-left:-120px;
+	  margin-top:6px;
+	   overflow: hidden;
+	   font-size:28px;
+  }
+  .bg:hover img{
+  	transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	cursor: crosshair;
+  }
+  .dsh{
+   border: 0.5px solid #DCDCDC;
+   width:55px;
+   margin-left:32px;
+   margin-top:-20px;
+
+  }
+  #name{
+  margin-left:30px;
+  margin-top:0px;
+  text-align: justify;
+  color:black;
+  font-weight:bold;
+  }
+  #name2{
+  margin-left:35px;
+  margin-top:-20px;
+  text-align: justify;
+  }
+  .dsh2{
+   margin-left:32px;
+   margin-top:-20px;
+   border: 0.5px solid #DCDCDC;
+   width:540px;
+  }
+  #name3{
+   margin-top:20px;
+   margin-left:35px;
+   text-align: justify;
+  }
+  #name4{
+   margin-top:20px;
+   margin-left:35px;
+   text-align: justify;
+  }
+  #web{
+   margin-top:-30px;
+   margin-left:35px;
+   text-align: justify;
+  }
+  .dsh3{
+   margin-left:32px;
+   margin-top:20px;
+   border: 0.5px solid #DCDCDC;
+   width:540px;
+  }
+ 
+
+  </style>
+  
+
 <body>
 
-<h1>Hello, my name is <span id="name"></span></h1>
+<div id="wrapper" class="homepage-1"> <!-- wrapper -->
+          <div id="header"> <!-- header -->
+              <div class="top"> <!-- top -->
+                  <div class="container">
+                      <ul class="top-support"> 
+                          <li><span>HYGIENE & SANITIZATION</span></li>                    
+                      </ul>
+                      <div class="top-control">
+                          <a href="faq.html">FAQs</a>
+                      </div>					
 
-<script>
-var queryString = location.search.substring(1);
-var a = queryString.split("|");
-var value1 = a[0];
-var value2 = a[1];
+                  </div>
+              </div> <!-- top -->
+              
+              <div id="believe-nav"> <!-- Nav -->
+                  <div class="container">
+                      <div class="min-marg">
+                          <nav class="navbar navbar-default">
+                              <!-- <div class="container-fluid"> -->
+                                  <!-- Brand and toggle get grouped for better mobile display -->
+                                  <div class="navbar-header">
+                                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                          <span class="sr-only">Toggle navigation</span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                      </button>
+                                      <a class="navbar-brand" href="index.html"><img src="images/clean-logo.png" alt="logo" height="40px" width="190px"></a>
+                                  </div>
 
-if (value1 == "SAFETYWARE Instant Gel Hand Sanitizer") {
+                                  <!-- Collect the nav links, forms, and other content for toggling -->
+                                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                                  
+                                      <ul class="nav navbar-nav navbar-right">
+                                          <li class="menu-search-form">
+                                              <a href="#" id="open-srch-form"><img src="images/srch.png" alt="srch"></a>
+                                          </li>
+                                          <li id="open-srch-form-mod">
+                                              <div>
+                                                  <form class="side-search">
+                                                      <div class="input-group">
+                                                          <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon1">
+                                                          <a href="" class="input-group-addon btn-side-serach" id="basic-addon1"><i class="fa fa-search"></i></a>
+                                                      </div>
+                                                  </form>
+                                              </div>
+                                          </li>
+                                      </ul>                                   
+                                  </div><!-- /.navbar-collapse -->
+                              <!--</div> -->                          
+                          </nav>
+                      </div>
+                      <div class="srch-form">
+                          <form class="side-search">
+                              <div class="input-group">
+                                  <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon2">
+                                  <a href="" class="input-group-addon btn-side-serach" id="basic-addon2"><i class="fa fa-search"></i></a>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div> <!-- Nav -->
 
-     let name = value1;
-    document.getElementById("name").innerHTML = name;
+              
+              
+              <div id="cat-nav">
+              <div class="container">
+                  <nav class="navbar navbar-default">
+                      <!-- <div class="container-fluid"> -->
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cat-nav-mega">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                      </div>
 
-}else{
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="cat-nav-mega">
+                          <ul class="nav navbar-nav">
+                              <li class=""><a href="index.html">Home</a></li>
+                              <li class="dropdown menu-large">
+                                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product <i class="fa fa-angle-down"></i></a>
+                                  <ul class="dropdown-menu megamenu" role="menu">
+                                      <li width="20px">
+                                          
+                                              <div class="mega-sub">
+											  
+                                                  <div class="mega-sub-title">Sanitizer</div>
+											
+                                                  <ul>
+                                                      <li><a href="gelhand.html">SAFETYWARE Instant Gel Hand Sanitizer</a></li>
+													  <hr>
+                                                      <li><a href="liquidhand.html">SAFETYWARE Instant Liquid Hand Sanitizer</a></li>
+													  <hr>
+                                                      <li><a href="liquidsurface.html">SAFETYWARE Liquid Surface Sanitizer</a></li>
+													  <hr>
+													  <li><a href="surfacewipes.html">SAFETYWARE Surface Sanitizing Wipes</a></li>
+													  <br>
+													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
+                                                  </ul>
+                                              </div>                                
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li><a href="contact.html">Contact Us</a></li>
+             
+                          
+                          </ul>
+                           
+                      </div><!-- /.navbar-collapse -->
+                      <!--</div> -->
+                  </nav>
+              </div>
+              </div>      
+          </div> <!-- header -->
+          
 
-     let name = "no";
-    document.getElementById("name").innerHTML = name;
-}
-</script>
+          
+          <div id="content"> <!-- Content -->
+       
+              <div class="newest">
+                  <div class="container">
+                      <div class="newest-content">
+                          <div class="newest-tab">                            
+                              
+                              <div id="myTabContent" class="tab-content">
+                                  <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
+                                      <div class="row clearfix">
+                                          <div class="col-md-3 prdct-grid">
+                                              <div class="product-fade">	
 
-</body>
+											  
+                                                        <div class="wrap">
+														<div class="ibg">
+													   
+                                                          <div class="bg"><img id="img" alt="" height="350px" width="350px"></div>
+														</div>	
+														<div class="ibg2">
+														 <b><h3 id="name"></h3></b>
+														<br>
+														
+														<div class="dsh"></div>
+														<br>
+														<h4 id="name2"> </h4>
+														<br>
+														<div class="dsh2"></div>
+														<h5 id="name3"> </h5>
+														<br>
+														<div class="dsh2"></div>
+														<h5 id="name4"> </h5>
+														<br>
+														<h4 id="web" style="border: 1.5px solid #DCDCDC;width:200px;background-color:black;padding:5px;text-align:center"></h4>
+													    <div class="dsh3"></div>
+														<br>
+
+                                                        </div>	
+                                                     </div>														
+                                              </div>                                            
+                                              
+                                          </div>                                        
+
+                                      </div>
+
+									  
+                                  </div>
+                                  
+                                  <div role="tabpanel" class="tab-pane fade" id="2" aria-labelledby="cat-2">
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <p>....</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div role="tabpanel" class="tab-pane fade" id="3" aria-labelledby="cat-3">
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <p>....</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                        
+              
+          </div> <!-- Content -->
+          
+
+          <div id="footer"><!-- Footer -->
+              <div class="footer-widget">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-3">
+                              <div class="text-widget">                               
+                                  <a href="index.html"> <img src="images/clean-logo.png" alt="ft-logo" height="50px" width="220px"></a>
+								  <br/>
+								  
+                                  <table style="color:#ffffff; font-size:13px;">
+								  <tr>
+								  <td><div class="wid-title">Contact Sales</div></td>
+								  </tr>
+								  <tr>
+								  <br/>
+								  <td style="padding:0;">Penang : </td>
+								  <td style="padding:0;"><br/>+6 04-502 3882 (8 lines)<br/>+6 04-508 1882 (Fax)</td>
+								  </tr>
+					
+								  <tr>
+                                  								  
+								  <td style="padding:0; "><br/>Perak : </td>
+								  <td style="padding:0;"><br/>+6 017-345 4882</td>
+								  </tr>
+								  <tr><td></td><td></td></tr>
+								  <tr>
+								  <td style="padding:0;">Johor : </td>
+								  <td style="padding:0;"><br/>+6 07-511 4882<br/>+6 07-562 8880(Fax)
+								  </tr>
+								  <tr><td></td><td></td></tr>
+								  <tr>
+								  <td style="padding:0;">Kuala Lumpur : </td>
+								  <td style="padding:0;"><br/>+6 03-6262 0882 (4 Lines)<br/>+6 03-6270 0393(Fax)</td></tr>
+								  <tr><td></td><td></td></tr>
+								  <tr>
+								  <td style="padding:0;">Melaka : </td>
+								  <td style="padding:0;"><br/>+6 06-336 3882 (2 Lines)<br/>+6 06-337 5881(Fax)</td>
+								  </tr>
+								  <tr>
+								  <td style="padding:0;">Sarawak : </td>
+								  <td style="padding:0;"><br/><br/>+608-226 6182<br/>+608-226 6182 (Fax)<br/>+6012-568 7882 (HP)</td>
+								  </tr>
+								  <tr><td></td><td></td></tr>
+								  <tr>
+								  <td style="padding:0;">Sabah : </td>
+								  <td style="padding:0;"><br/><br/>+608-841 2982<br/>+608-848 9282 (Fax)<br/>+6017-645 4882 (HP)</td>
+								  </tr>
+								  <tr><td></td><td></td></tr>
+								  <tr>
+								  <td style="padding:0;"><br/>Singapore : </td>
+								  <td style="padding:0;"><br/>+65 6744 0882</td>
+								  </tr>
+								  <tr><td></td><td></td></tr>
+								  </table>
+                                  <div class="clearfix"></div>
+                              </div>
+                          </div>
+
+                          <div class="ml">
+                          <div class="col-md-2">
+                              <div class="quick-links">
+                                  <div class="wid-title">Retail Shop</div>
+                                  
+                                  <ul>
+                                      <li><b>Kedah (Sungai Petani)</b><br/><p>94A-B, Jalan Pengkalan,Taman Pekan Baru,08000 Sungai Petani, Kedah</p></br>
+									  <p>Tel: +6 04-421 4885 (8 lines)</p></li>
+                                      <li><br/><b>Pahang (East Coast)</b><br/><p>A21, Lorong Balok Perdana 3/1,Taman Balok Perdana,26080 Kuantan, Pahang</p></br>
+									  <p>Tel: +6 09-509 3882/1 (2 lines)</p><p>Fax: +6 09-509 3880</p></li>								 
+                                      <li><br/><b>Melaka</b><br/><p>No 6A & 6A-1, Jalan IKS M5,Taman IKS Merdeka,75350 Batu Berendam, Melaka</p></br>
+									  <p>Tel: +6 06-336 3882</p><p>Fax: +6 06-337 5881</p></li>
+
+                                  </ul>
+                              </div>
+                          </div>
+						  </div>
+						  
+						  <div class="m2">
+                          <div class="col-md-3">
+                              <div class="subscribe">
+                              <div class="wid-title">Social Media</div>
+							  <a href="https://www.facebook.com/SafetywareGroup" target="_blank"><img class="alignnone size-medium wp-image-2835" src="https://safetyware.com/wp-content/uploads/2020/07/facebook.png" alt="Facebook" width="50" height="50" /></a>
+							  <a href="https://twitter.com/SafetywareSB" target="_blank"><img class="alignnone size-medium wp-image-2836" src="https://safetyware.com/wp-content/uploads/2020/07/twitter.png" alt="Twitter" width="50" height="50" /></a>
+							  <a href="https://www.linkedin.com/company/safetyware-group" target="_blank"><img class="alignnone size-medium wp-image-2836" src="https://safetyware.com/wp-content/uploads/2020/07/linkedin.png" alt="LinkedIn" width="50" height="50" /></a>
+							  <a href="https://www.instagram.com/safetyware_group/" target="_blank"><img class="alignnone size-medium wp-image-2836" src="https://safetyware.com/wp-content/uploads/2020/07/instagram.png" alt="Instagram" width="50" height="50" /></a>
+							  <a href="https://www.youtube.com/c/SafetywareGroup" target="_blank"><img class="alignnone size-medium wp-image-2836" src="https://safetyware.com/wp-content/uploads/2020/07/youtube.png" alt="YouTube" width="50" height="50" /></a>
+                              </div>
+							  <br/><br/><br/>
+							  
+							  <div class="subscribe">
+                              <div class="wid-title">Certification</div>
+							  <img class="alignnone size-medium wp-image-2835" src="https://safetyware.com/wp-content/uploads/2016/10/Malaysia-Brand.png" alt="Malaysia Brand" width="80" height="80" />
+                              </div>
+							  <br/><br/><br/>
+							  <div class="subscribe">
+                              <div class="wid-title">OSHA Information Partner:</div>
+							  <a href="https://proatoz.com/" target="_blank" rel="noopener"><img class="alignnone size-medium wp-image-2835" src="https://safetyware.com/wp-content/uploads/2020/02/proatoz.png" alt="OSHA Information Partner - proatoz" width="162" height="33" /></a>
+                              </div>
+                          </div>
+						  </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="footer-text">
+                  <div class="container">
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                  </div>
+              </div>
+          </div><!-- Footer -->
+      </div> <!-- wrapper -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/library.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.raty.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.selectbox-0.2.js"></script>
+    <script src="js/theme-script.js"></script>
+	
+	<script>
+    var queryString = location.search.substring(1);
+    var a = queryString.split("|");
+    var value1 = a[0];
+    var value2 = a[1];
+
+    if (value1 == "SAFETYWARE%20Instant%20Gel%20Hand%20Sanitizer") {
+
+    let name = value1;
+    let decoded = decodeURI(name);
+    document.getElementById("name").innerHTML = decoded;
+	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
+    document.getElementById("name3").innerHTML = "Type: Flip Top, Pump, Cap";
+	document.getElementById("name4").innerHTML = "Unit: Bottle";
+	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
+	 
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/collections/home-safety-products/products/safetyware-hsg0100100-instant-gel-hand-sanitizer-100ml-1?variant=41568551633060");
+     document.getElementById("web").innerHTML = result; 
+	
+	
+	
+    }else if(value1 == "SAFETYWARE%20Instant%20Liquid%20Hand%20Sanitizer"){
+
+    let name = value1;
+	let decoded = decodeURI(name);
+    document.getElementById("name").innerHTML = decoded;
+	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
+    document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
+	document.getElementById("name4").innerHTML = "Unit: Bottle";
+	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/collections/home-safety-products/products/safetyware-hsl0100050-pocket-size-instant-hand-sanitizer-liquid-50ml-1?variant=41568563298468");
+    document.getElementById("web").innerHTML = result; 
+
+    }else if(value1 == "SAFETYWARE%20Liquid%20Surface%20Sanitizer"){
+
+    let name = value1;
+	let decoded = decodeURI(name);
+    document.getElementById("name").innerHTML = decoded;
+	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
+    document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
+	document.getElementById("name4").innerHTML = "Unit: Bottle";
+	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Liquid+Surface+Sanitizer&type=product");
+    document.getElementById("web").innerHTML = result; 
+
+    }
+	else if(value1 == "SAFETYWARE%20Surface%20Sanitizing%20Wipes"){
+
+    let name = value1;
+	let decoded = decodeURI(name);
+    document.getElementById("name").innerHTML = decoded;
+	document.getElementById("name2").innerHTML = "Effectively eliminates 99.99% of harmful germs on hard surfaces";
+    document.getElementById("name3").innerHTML = "Type: Pull out";
+	document.getElementById("name4").innerHTML = "Unit: Canister";
+	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Surface+Sanitizing+Wipes&type=product");
+    document.getElementById("web").innerHTML = result; 
+
+    }
+	
+	
 
 
-
+    </script>
+	
+  </body>
 </html>
+
+
+
