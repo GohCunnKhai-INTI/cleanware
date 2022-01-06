@@ -49,6 +49,17 @@
   margin-top:70px;
   width:1550px;
   }
+  .megamenu{
+  border: 1px solid #000;
+  }
+  
+  .blink_me {
+  animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+  50% { opacity: 0.65; }
+  }
 
   </style>
 

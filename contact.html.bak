@@ -68,6 +68,14 @@
   #if{
   margin-top:10px;
   }
+  
+  .blink_me {
+  animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+  50% { opacity: 0.65; }
+  }
 
   </style>
   
@@ -209,7 +217,7 @@
                   <div class="container">
                       <div class="row">
                           <div class="col-md-6 ct-desc" style="width:388px">
-                              <img src="images/Malaysia.png" style="width:80px;height:80px;"></img>
+                              <img src="images/malaysia.png" style="width:80px;height:80px;"></img>
                               <div class="post-content"><br>
                                   
 								  <b>Malaysia
@@ -306,7 +314,7 @@
 							  HP: +6017-645 4882
 							  <br><br>
 							  
-							  <img src="images/Singapore.png" style="width:80px;height:80px;"></img>
+							  <img src="images/singapore.png" style="width:80px;height:80px;"></img>
 							  <br><br>
 							  <b>Singapore
 								  <br/>
@@ -318,7 +326,7 @@
 								  Tel : +65 6744 0882
 								  <br/><br/>
                              
-							 <img src="images/Australia.png" style="width:80px;height:80px;"></img>
+							 <img src="images/australia.png" style="width:80px;height:80px;"></img>
 							  <br><br>
 							  <b>AUSTRALIA
 								  <br/>

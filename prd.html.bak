@@ -114,6 +114,11 @@
    margin-left:35px;
    text-align: justify;
   }
+  #name5{
+   margin-top:20px;
+   margin-left:35px;
+   text-align: justify;
+  }
   #web{
    margin-top:-30px;
    margin-left:35px;
@@ -223,6 +228,21 @@
         width: 100%;
     }
 	}
+	
+	.root{
+	 width:50%;
+	 height:18px;
+	 margin-top:-20px;
+	 margin-left:80px;
+	}
+	
+  .blink_me {
+  animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+  50% { opacity: 0.65; }
+  }
  
 
   </style>
@@ -393,8 +413,20 @@
 														<br>
 														<h4 id="web" style="border: 1.5px solid #DCDCDC;width:200px;background-color:black;padding:5px;text-align:center"></h4>
 													    <div class="dsh3"></div>
-														<br>
+														<h5 id="name5">Share on: 
+														&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 														
+														<div class="root">
+														<script async defer crossorigin="anonymous"  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="z5U9zpQr"></script>
+														
+														<div class="fb-share-button"  data-href="https://ever8888.github.io/cleanware/product.html" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" 
+													    >Share</a></div>
+														
+														</div>
+														</h5>
+														
+														
+
 
                                                         </div>	
                                                      </div>	
@@ -425,14 +457,16 @@
                           </div>
                           <div class="row">
                               <div class="col-md-4 blog-ct">
-                                  <center><img id="img2" alt="" class="img-responsive" width="200px" height="200px" onclick="next()"></center>
+                                  <center><img id="img2" alt="" class="img-responsive" width="200px" height="200px" onclick="next()"
+								  style="cursor:pointer"></center>
                                   <div class="blog-ct-title">
                                       <h4 id="mlike"></h4>
                                     
                                   </div>
                               </div>
                               <div class="col-md-4 blog-ct">
-                                  <center><img id="img3" alt="" class="img-responsive" width="200px" height="200px" onclick="next2()"></center>
+                                  <center><img id="img3" alt="" class="img-responsive" width="200px" height="200px" onclick="next2()"
+								  style="cursor:pointer"></center>
                                   <div class="blog-ct-title">
                                       <h4 id="mlike2"></h4>
                                    
@@ -440,7 +474,8 @@
                               </div>
 							  
 							  <div class="col-md-4 blog-ct">
-                                  <center><img id="img4" alt="" class="img-responsive" width="200px" height="200px" onclick="next3()"></center>
+                                  <center><img id="img4" alt="" class="img-responsive" width="200px" height="200px" onclick="next3()" 
+								  style="cursor:pointer"></center>
                                   <div class="blog-ct-title">
                                       <h4 id="mlike3"></h4>
                                    
@@ -645,6 +680,9 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
+	
+
+
 	
 	<script>
     var queryString = location.search.substring(1);
@@ -918,8 +956,7 @@
        img01.className = "modal-content";
      }, 400);
 	} 
-	
-	
+		
 	
 	let table = document.createElement('table');
 	let thead = document.createElement('thead');
@@ -1064,6 +1101,31 @@
     window.location.href = "prd.html?SAFETYWARE Surface Sanitizing Wipes|1";
 	}
 	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/clean-logo.png';
+    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitizer';
+
+    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitizer';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	} 
+	
 	let table = document.createElement('table');
 	let thead = document.createElement('thead');
 	let tbody = document.createElement('tbody');
@@ -1183,6 +1245,31 @@
 	function next3(){
     window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitizer|1";
 	}
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/clean-logo.png';
+    modalImg.alt = 'SAFETYWARE Surface Sanitizing Wipes';
+
+    captionText.innerHTML = 'SAFETYWARE Surface Sanitizing Wipes';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	} 
 	
 	
 	let table = document.createElement('table');
