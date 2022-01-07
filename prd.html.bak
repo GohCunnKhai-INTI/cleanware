@@ -665,7 +665,7 @@
               </div>
               <div class="footer-text">
                   <div class="container">
-                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
                   </div>
               </div>
           </div><!-- Footer -->
