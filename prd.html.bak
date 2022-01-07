@@ -699,7 +699,7 @@
 	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
     document.getElementById("name3").innerHTML = "Type: Flip Top, Pump, Cap";
 	document.getElementById("name4").innerHTML = "Unit: Bottle";
-	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
+	document.getElementById('img').style.backgroundImage = "url('images/50ml-1d.png')";
 	
 	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitizer";
 	document.getElementById("mlike2").innerHTML = "SAFETYWARE Liquid Surface Sanitizer";
