@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+<script src="src/Nzoom.min.js"></script>
+
+
+</head>
+
+<style>
+body {
+  margin: 20px 0;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 1.25rem;
+  width: 300px;
+}
+
+form, p {
+  margin: 20px;
+}
+
+p.note {
+  font-size: 1rem;
+  color: red;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-family: 'Lato';
+  width: 300px;
+  margin-top: 10px;
+}
+
+label {
+  width: 300px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+[type="submit"], [type="reset"], button, html [type="button"] {
+    margin-left: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 300;
+    padding: 10px 0;
+    line-height: 1;
+}
+
+/* Shrink wrap strategy 1 */
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
+
+
+.easyzoom {
+float: left;
+}
+.easyzoomimg {
+display: block;
+}
+.easyzoom {
+display: inline-block;
+}
+.easyzoomimg {
+vertical-align: bottom;
+}
+
+.zoomArea {
+
+  width:600px;
+
+  height:450px;
+
+  overflow:hidden;
+
+  border:1px solid
+
+}
+
+ 
+
+.zoomArea > image {
+
+  width:100%;
+
+  height:100%;
+
+}
+</style>
+
+<form id="basic-form" action="" method="post">
+    <p>
+      <label for="name">First Name <span>(required, at least 3 characters)</span></label>
+      <input id="name" name="name" minlength="3" type="text" required>
+    </p>
+	
+	    <p>
+      <label for="name">Last Name <span>(required, at least 3 characters)</span></label>
+      <input id="name2" name="name2" minlength="3" type="text" required>
+    </p>
+	
+	<p>
+      <label for="name">Company Name <span>(required, at least 3 characters)</span></label>
+      <input id="name3" name="name3" minlength="3" type="text" required>
+    </p>
+	
+	<p>
+      <label for="name">Job Title<span>(required, at least 3 characters)</span></label>
+      <input id="name4" name="name4" minlength="3" type="text" required>
+    </p>
+	
+	
+    <p>
+      <label for="email">E-Mail <span>(required)</span></label>
+      <input id="email" type="email" name="email" required>
+    </p>
+	
+	<p>
+      <label for="tel">Phone Number <span>(required)</span></label>
+      <input id="phone" type="tel" name="phone" required>
+    </p>
+	
+		
+    <p>
+      <input class="submit" type="submit" value="SUBMIT">
+    </p>
+</form>
+	
+	
+	<div class="zoomArea">
+
+  <img id="a" data-NZoomscale="2"   src="images/a1.jpg" alt="Product Image">
+
+</div>
+
+
+<div id="main2div"> 
+  
+  <img src="images/a1.jpg" id="my" onclick="my2()">
+
+</div>
+
+
+<div id="maindiv"> </div>
+
+
+
+    <script>
+ 
+$(document).ready(function() {
+$("#basic-form").validate();
+});
+
+
+ mainDiv = document.getElementById( 'maindiv' );
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ 
+ 
+ function my2(){
+ 	document.getElementById('NZoomImg').src = 'images/a1.jpg';
+
+ }
+ 
+ 
+  function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/500ml-1b.png';
+
+ }
+ 
+
+
+     
+ 
+ 
+ 
+ 
+    </script>
+	
+	</html>
