@@ -6,6 +6,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+<script src="src/Nzoom.min.js"></script>
+
+
 </head>
 
 <style>
@@ -69,6 +75,50 @@ input.error {
     padding: 10px 0;
     line-height: 1;
 }
+
+/* Shrink wrap strategy 1 */
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
+
+
+.easyzoom {
+float: left;
+}
+.easyzoomimg {
+display: block;
+}
+.easyzoom {
+display: inline-block;
+}
+.easyzoomimg {
+vertical-align: bottom;
+}
+
+.zoomArea {
+
+  width:600px;
+
+  height:450px;
+
+  overflow:hidden;
+
+  border:1px solid
+
+}
+
+ 
+
+.zoomArea > image {
+
+  width:100%;
+
+  height:100%;
+
+}
 </style>
 
 <form id="basic-form" action="" method="post">
@@ -103,21 +153,61 @@ input.error {
       <input id="phone" type="tel" name="phone" required>
     </p>
 	
-	
-
-	
-
-	
+		
     <p>
       <input class="submit" type="submit" value="SUBMIT">
     </p>
 </form>
+	
+	
+	<div class="zoomArea">
+
+  <img id="NZoomImg" data-NZoomscale="2"   src="images/a1.jpg" alt="Product Image">
+
+</div>
+
+
+<div id="main2div"> 
+  
+  <img src="images/a1.jpg" id="my" onclick="my2()">
+
+</div>
+
+
+<div id="maindiv"> </div>
+
+
 
     <script>
  
 $(document).ready(function() {
 $("#basic-form").validate();
 });
+
+
+ mainDiv = document.getElementById( 'maindiv' );
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ mainDiv.innerHTML += '<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+ 
+ 
+ function my2(){
+ 	document.getElementById('NZoomImg').src = 'images/a1.jpg';
+
+ }
+ 
+ 
+  function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/500ml-1b.png';
+
+ }
+ 
+
+
+     
+ 
+ 
+ 
  
     </script>
 	

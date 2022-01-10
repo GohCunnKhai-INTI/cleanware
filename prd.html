@@ -11,8 +11,16 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
     <link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="src/Nzoom.min.js"></script>
       
-    <!-- Bootstrap -->
+    <!-- Bootstrap    
+	.bg:hover img{
+  	transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	cursor: crosshair;
+    }-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- main css -->
@@ -59,11 +67,11 @@
   .wrap{
      width: 1050px;
 	 height: 380px;
-
+	 
     overflow: hidden;
   }
   .ibg{
-    margin-left:100px;
+    margin-left:50px;
 	margin-top:6px;
 	float:left;
 
@@ -74,11 +82,8 @@
 	   overflow: hidden;
 	   font-size:28px;
   }
-  .bg:hover img{
-  	transform: scale(1.08);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	cursor: crosshair;
-  }
+  
+
   .dsh{
    border: 0.5px solid #DCDCDC;
    width:55px;
@@ -148,7 +153,7 @@
   border: 1px solid #000;
   }
   
-    #img {
+    #NZoomImg {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -243,6 +248,58 @@
   @keyframes blinker {  
   50% { opacity: 0.65; }
   }
+  
+  #gall{
+
+ 
+  float:left;
+  margin-left:35px;
+  
+  }
+  
+  /* Shrink wrap strategy 1 */
+
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
+
+.easyzoom {
+float: left;
+}
+.easyzoomimg {
+display: block;
+}
+.easyzoom {
+display: inline-block;
+}
+.easyzoomimg {
+vertical-align: bottom;
+}
+
+.zoomArea {
+
+  overflow:hidden;
+
+  border:1px solid
+
+}
+
+ 
+
+.zoomArea > image {
+
+  width:100%;
+
+  height:100%;
+
+}
+
+#page{
+border: 0.5px solid #DCDCDC;
+}
  
 
   </style>
@@ -388,9 +445,17 @@
 
 											  
                                                         <div class="wrap">
+														
+														<div id="gall">
+																		
+														</div>
+		
 														<div class="ibg">
-													   
-                                                          <div class="bg"><img id="img" alt="" height="350px" width="350px"></div>
+														
+														<div class="zoomArea">																			
+                                                          <div class="bg"><img id="NZoomImg" alt="" data-NZoomscale="2" height="350px" width="350px"></div>
+														  
+														</div>
 														  
 														  <div id="myModal" class="modal">
 														   <img class="modal-content" id="img01">
@@ -681,6 +746,7 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
+
 	
 
 
@@ -699,7 +765,9 @@
 	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
     document.getElementById("name3").innerHTML = "Type: Flip Top, Pump, Cap";
 	document.getElementById("name4").innerHTML = "Unit: Bottle";
-	document.getElementById('img').style.backgroundImage = "url('images/50ml-1d.png')";
+	document.getElementById('NZoomImg').src = 'images/a1.jpg';
+
+	
 	
 	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitizer";
 	document.getElementById("mlike2").innerHTML = "SAFETYWARE Liquid Surface Sanitizer";
@@ -720,11 +788,26 @@
     window.location.href = "prd.html?SAFETYWARE Surface Sanitizing Wipes|1";
 	}
 	
+	gall2=document.getElementById("gall");
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/a1.jpg" onclick="abc()"></ div>';
+	
+	function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/500ml-1b.png';
+	document.getElementById("page").style.borderColor = "#000000";
+	}
+ 
+	
+	
 	// Get the modal
 	var modal = document.getElementById('myModal');
 	
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('img');
+	var img = document.getElementById('NZoomImg');
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	
@@ -932,6 +1015,8 @@
 	function next3(){
     window.location.href = "prd.html?SAFETYWARE Surface Sanitizing Wipes|1";
 	}
+	
+	
 	
 	// Get the modal
 	var modal = document.getElementById('myModal');
