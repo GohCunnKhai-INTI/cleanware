@@ -960,7 +960,7 @@ border: 0.5px solid #DCDCDC;
 	}
 	
 	function abc4(){
- 	document.getElementById('NZoomImg').src = 'images/1000ml-1a.jpg';
+ 	document.getElementById('NZoomImg').src = 'images/1000ml-1b.png';
 	document.getElementById("page2").style.borderColor = "#DCDCDC";
 	document.getElementById("page").style.borderColor = "#DCDCDC";
 	document.getElementById("page3").style.borderColor = "#DCDCDC";
@@ -979,7 +979,7 @@ border: 0.5px solid #DCDCDC;
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/1000ml-1a.jpg';
+    modalImg.src = 'images/1000ml-1b.png';
     modalImg.alt = 'SAFETYWARE Instant Gel Hand Sanitiser (1000 ml)';
 
     captionText.innerHTML = 'SAFETYWARE Instant Gel Hand Sanitiser (1000 ml)';
@@ -996,7 +996,7 @@ border: 0.5px solid #DCDCDC;
 	}
 	
 	function abc5(){
- 	document.getElementById('NZoomImg').src = 'images/5000ml-1c.jpg';
+ 	document.getElementById('NZoomImg').src = 'images/5000ml-1b.png';
 	document.getElementById("page2").style.borderColor = "#DCDCDC";
 	document.getElementById("page").style.borderColor = "#DCDCDC";
 	document.getElementById("page3").style.borderColor = "#DCDCDC";
@@ -1016,7 +1016,7 @@ border: 0.5px solid #DCDCDC;
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/5000ml-1c.jpg';
+    modalImg.src = 'images/5000ml-1b.png';
     modalImg.alt = 'SAFETYWARE Instant Gel Hand Sanitiser (5000 ml)';
 
     captionText.innerHTML = 'SAFETYWARE Instant Gel Hand Sanitiser (5000 ml)';
