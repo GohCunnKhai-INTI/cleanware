@@ -98,14 +98,6 @@
                               <!--</div> -->                          
                           </nav>
                       </div>
-                      <div class="srch-form">
-                          <form class="side-search">
-                              <div class="input-group">
-                                  <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon2">
-                                  <a href="" class="input-group-addon btn-side-serach" id="basic-addon2"><i class="fa fa-search"></i></a>
-                              </div>
-                          </form>
-                      </div>
                   </div>
               </div> <!-- Nav -->
 
@@ -212,11 +204,14 @@
                       <div class="cat-offers">
                           <div class="row">
                               <div class="brand-title">
-                              <h3><u>STW Own Manufactured Hand Sanitizer (Gel)</u></h3>
+                              <h3><u>STW Own Manufactured Hand Sanitiser (Gel)</u></h3>
                           </div>
 						  <iframe width="1150" height="405" src="https://www.youtube.com/embed/wX1qVLg__yc"></iframe>
 						  <div class="ln2"></div>
-						  <p>SAFETYWARE Group is the leading safety products manufacturer and exporter based in Malaysia. As a manufacturer of hygiene and sanitisation products, Safetyware factory is cosmetic GMP certified and approved by NPRA. We manufacture hand sanitizers and disinfectants using superior quality raw materials and unique formulas that developed by our research & development team under the help of consultants & chemists with more than 30 years of experience.
+						  <p>SAFETYWARE Group is the leading safety products manufacturer and exporter based in Malaysia. 
+						  As a manufacturer of hygiene and sanitisation products, Safetyware factory is cosmetic GMP certified and approved by NPRA.
+						  We manufacture hand sanitisers and disinfectants using superior quality raw materials and unique formulas that developed by our research & 
+						  development team under the help of consultants & chemists with more than 30 years of experience.
 						  </p>
                            <div class="ln2"></div>
 						   <center>
@@ -237,9 +232,10 @@
                               <ul id="myTab" class="nav nav-tabs newest" role="tablist">
                                   <li role="presentation" class="active">
                                        <div class="brand-title">
-                              <h3><u>What is Hygiene? What is Sanitization?</u></h3>
+                              <h3><u>What is Hygiene? What is Sanitisation?</u></h3>
                               </div>
-							  <p>Hygiene is a series of practice conducted to maintain health and prevent spread of diseases, especially through cleanliness. Sanitization then means an act or process in cleaning something to make it free from infectious microbes like germs and bacteria. 
+							  <p>Hygiene is a series of practice conducted to maintain health and prevent spread of diseases, especially through cleanliness. 
+							  Sanitisation then means an act or process in cleaning something to make it free from infectious microbes like germs and bacteria. 
 							  </p>
 							   <div class="ln2"></div>
 							    <img src="images/hyg.jpg" alt="" width="1024x" height="287px">
@@ -252,16 +248,19 @@
                   <div class="container">
                       <div class="brands-inner">
                           <div class="brand-title">
-                            <h3><u> How to Choose a Sanitizing Product?</u></h3>
+                            <h3><u> How to Choose a Sanitising Product?</u></h3>
                           </div>
 						  <p>
 						  <h4>1. Check out their alcohol content</h4>
 						  
 						  <ol type="a">
-						  <li>Sanitizing products should always be alcohol-based with  alcohol concentration of at least 60 to 75% alcohol, for them to perform their strongest disinfecting effect.</li>
-						  <li>The active ingredient – Alcohol that commonly found in the market are either ethanol or isopropyl alcohol (IPA) where both act the similar effect in killing the microbes rapidly.</li>
+						  <li>Sanitising products should always be alcohol-based with  alcohol concentration of at least 60 to 75% alcohol, 
+						  for them to perform their strongest disinfecting effect.</li>
+						  <li>The active ingredient – Alcohol that commonly found in the market are either ethanol or isopropyl alcohol (IPA) where both act the similar 
+						  effect in killing the microbes rapidly.</li>
 						  <li>
-                          According to World Health Organisation (WHO) and Food and Drug Administration (FDA) recommendation standards, the alcohol content of sanitizing products should be having at least 75% volume per volume to make sure the effectiveness on antimicrobial activity.
+                          According to World Health Organisation (WHO) and Food and Drug Administration (FDA) recommendation standards, the alcohol content of
+						  sanitising products should be having at least 75% volume per volume to make sure the effectiveness on antimicrobial activity.
 						  </li>
 						  </ol>
 						  <div class="ln2"></div>
@@ -274,12 +273,15 @@
                           Additional of emollients leaves your hands feeling soft and refreshed to prevent it from dryness after application on the long-term usage.
 						  </li>
 						  <li>
-                          Carbomers are added into the hand sanitizer as gelling agent to enhance its viscosity to become more gel-like. It usually comes in paired with a base to neutralise the acidic effects of the carbomer.
+                          Carbomers are added into the hand sanitiser as gelling agent to enhance its viscosity to become more gel-like. 
+						  It usually comes in paired with a base to neutralise the acidic effects of the carbomer.
 						  </li>
 						  <li>
-                           Right amount of fragrance gives the sanitizer a pleasant smell to get rid of choking and pungent alcoholic odour and leave the great smelling and gentle on hands.
+                           Right amount of fragrance gives the sanitiser a pleasant smell to get rid of choking and pungent alcoholic odour and leave the great smelling 
+						   and gentle on hands.
 						  </li>
-						  <li>Some sanitizers might contain Vitamin E as additional advantage of boosting skin health and prevent skin from being too dry because of alcohol’s drying effects.</li>
+						  <li>Some sanitisers might contain Vitamin E as additional advantage of boosting skin health and prevent skin from being 
+						  too dry because of alcohol’s drying effects.</li>
 						  
 						  </ol>
 						  <div class="ln2"></div>
@@ -287,10 +289,13 @@
 						  <h4>3. Read their properties</h4>
 						  
 						  <ol type="a">
-						  <li>A good sanitizing products would have the properties of anti-bacterial, which indicates their ability to effectively kill the infectious microbes like germs and bacteria that may cause illness.</li>
-						  <li>Rinse-free sanitizing products benefits user of its convenient application to be used anytime, anywhere at areas where water and soap is not available.</li>
+						  <li>A good sanitising products would have the properties of anti-bacterial, which indicates their ability to effectively kill 
+						  the infectious microbes like germs and bacteria that may cause illness.</li>
+						  <li>Rinse-free sanitising products benefits user of its convenient application to be used anytime, 
+						  anywhere at areas where water and soap is not available.</li>
 						  <li>
-                          Non-sticky and quick drying features offer fast-acting disinfecting effect and leave no residue or stickiness on skin while keeping hands nourish and smooth.
+                          Non-sticky and quick drying features offer fast-acting disinfecting effect and leave no residue or stickiness on skin 
+						  while keeping hands nourish and smooth.
 						  </li>
 				
 						  </ol>
@@ -300,7 +305,8 @@
 						  
 						  <ol type="a">
 						  <li>
-                          Alcohol is volatile and tends to evaporate over time, which will cause the sanitizing products to lose its ability to ward off infections and fight the microbes. You have to both store and use the product properly to maintain the alcohol concentration at the desired level.
+                          Alcohol is volatile and tends to evaporate over time, which will cause the sanitising products to lose its ability to ward off 
+						  infections and fight the microbes. You have to both store and use the product properly to maintain the alcohol concentration at the desired level.
 						  </li>
 				
 						  </ol>
@@ -310,14 +316,15 @@
 						  
 						  <ol type="1">
 						  <li>
-                          The hand sanitizers can be classified into two types according to their viscosity, which are the gel type and liquid type.
+                          The hand sanitisers can be classified into two types according to their viscosity, which are the gel type and liquid type.
 						  </li>
 						  <ol type="a">
-						  <li>Gel type hand sanitizer is ideal to keep your hands clean throughout your day as an excellent option for easy application.</li>
-						  <li>Liquid type hand sanitizer can be used for easy spreading of disinfectant solution and great to disinfect not only your hands but surfaces as well.</li>
+						  <li>Gel type hand sanitiser is ideal to keep your hands clean throughout your day as an excellent option for easy application.</li>
+						  <li>Liquid type hand sanitiser can be used for easy spreading of disinfectant solution and great to disinfect not only
+						  your hands but surfaces as well.</li>
 						  </ol>
 						  <li>
-						  Surface sanitizers are made in liquid form for easy cleaning and disinfectant purposes on various surfaces through sprays.
+						  Surface sanitisers are made in liquid form for easy cleaning and disinfectant purposes on various surfaces through sprays.
 						  </li>
 				
 						  </ol>
