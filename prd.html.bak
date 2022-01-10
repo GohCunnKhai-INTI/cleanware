@@ -307,7 +307,7 @@ text-align: justify;
   margin-left:145px;
   background-color:#FFFFFF;
   border:none;
-  color:#DCDCDC;
+  color:#D3D3D3;
 }
 
 #topr:hover{
