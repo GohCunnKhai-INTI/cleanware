@@ -11,7 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
     <link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
-      
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
@@ -57,7 +58,11 @@
 
   }
   .megamenu{
-  border: 1px solid #000;
+    width:220px;
+  height:220px;
+  }
+  .bb:hover{
+  text-decoration: underline blue 1px;
   }
   
   .blink_me {
@@ -67,6 +72,103 @@
   @keyframes blinker {  
   50% { opacity: 0.65; }
   }
+  
+  .e #t{
+ position: absolute;
+  top: 12px;
+  margin-left:75px;
+ background-color: transparent;
+  
+  border:none;
+  color:#C0C0C0;
+  }
+  
+  .e #t:hover{
+    color: black;
+
+  }
+  
+  /* The Modal (background) */
+	.modal {
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+	
+	/* Modal Content (image) */
+	.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    //max-width: 75%;
+	}
+	/* Caption of Modal Image */
+	#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+	}
+	@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+	}
+	
+	@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+	}
+	
+	@-webkit-keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+	}
+	
+	@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+	
+	}
+	
+	/* Add Animation */
+	.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+	}
+	
+	.out {
+	animation-name: zoom-out;
+	animation-duration: 0.6s;
+	}
+	
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px){
+	.modal-content {
+        width: 100%;
+    }
+	}
+	
+	.root{
+	 width:50%;
+	 height:18px;
+	 margin-top:-20px;
+	 margin-left:80px;
+	}
+
 
   </style>
   
@@ -77,7 +179,7 @@
               <div class="top"> <!-- top -->
                   <div class="container">
                       <ul class="top-support"> 
-                          <li><span>HYGIENE & SANITIZATION</span></li>                    
+                          <li><span>HYGIENE & SANITISATION</span></li>                    
                       </ul>
                       <div class="top-control">
                           <a href="faq.html">FAQs</a>
@@ -99,37 +201,11 @@
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.html"><img src="images/clean-logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
-
-                                  <!-- Collect the nav links, forms, and other content for toggling -->
-                                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                                  
-                                      <ul class="nav navbar-nav navbar-right">
-                                          <li class="menu-search-form">
-                                              <a href="#" id="open-srch-form"><img src="images/srch.png" alt="srch"></a>
-                                          </li>
-                                          <li id="open-srch-form-mod">
-                                              <div>
-                                                  <form class="side-search">
-                                                      <div class="input-group">
-                                                          <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon1">
-                                                          <a href="" class="input-group-addon btn-side-serach" id="basic-addon1"><i class="fa fa-search"></i></a>
-                                                      </div>
-                                                  </form>
-                                              </div>
-                                          </li>
-                                      </ul>                                   
-                                  </div><!-- /.navbar-collapse -->
+								  
                               <!--</div> -->                          
                           </nav>
-                      </div>
-                      <div class="srch-form">
-                          <form class="side-search">
-                              <div class="input-group">
-                                  <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon2">
-                                  <a href="" class="input-group-addon btn-side-serach" id="basic-addon2"><i class="fa fa-search"></i></a>
-                              </div>
-                          </form>
                       </div>
                   </div>
               </div> <!-- Nav -->
@@ -153,37 +229,33 @@
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                              <li class=""><a href="index.html">Home</a></li>
+                              <li><a href="index.html">Home</a></li>
                               <li class="dropdown menu-large">
                                   <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product <i class="fa fa-angle-down"></i></a>
                                   <ul class="dropdown-menu megamenu" role="menu">
                                       <li width="20px">
                                           
-                                              <div class="mega-sub">
-											  
-                                                  <div class="mega-sub-title">Sanitizer</div>
+                                              <div class="mega-sub" style="margin-top:8px;">
 											
                                                   <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitizer|1">SAFETYWARE Instant Gel Hand Sanitizer</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitizer|1">SAFETYWARE Instant Liquid Hand Sanitizer</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitizer|1">SAFETYWARE Liquid Surface Sanitizer</a></li>
-													  <hr>
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitizing Wipes|1">SAFETYWARE Surface Sanitizing Wipes</a></li>
-													  <br>
+                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser|1"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
+													 
+                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
+													
+                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
+												
+													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes|1"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
+													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
                                                   </ul>
-                                              </div>                                
+                                            </div>                                
                                       </li>
                                   </ul>
                               </li>
                               <li><a href="contact.html">Contact Us</a></li>
-							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>
-             
-                          
+							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
                           </ul>
                            
                       </div><!-- /.navbar-collapse -->
@@ -219,43 +291,76 @@
                                   <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
                                       <div class="row clearfix">
                                           <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">								
-                                                        <a href="prd.html?SAFETYWARE Instant Gel Hand Sanitizer|1">
-                                                          <img src="images/p-1.jpg" alt="" class="img-responsive">
-                                                        </a>											
+                                              <div class="product-fade">	
+
+											            <div class="e">
+                                                        <a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser">
+                                                          <center><img src="images/pr1.png" alt="SAFETYWARE Instant Gel Hand Sanitiser" 
+														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
+														</a>
+														<button style="font-size:24px" onclick="p1()" id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														   </div>														
                                               </div>
                                                
-                                                  <h4>SAFETYWARE Instant Gel Hand Sanitizer</h4>
+                                                  <h4>SAFETYWARE Instant Gel Hand Sanitiser</h4>
                                               
                                           </div>
                                           <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">								
-                                                        <a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitizer|1">
-                                                          <img src="images/p-1.jpg" alt="" class="img-responsive">
-                                                        </a>											
+                                              <div class="product-fade">
+											            <div class="e">
+                                                        <a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser">
+                                                          <center><img src="images/pr2.png" alt="SAFETYWARE Instant Liquid Hand Sanitiser" 
+														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
+                                                        </a>
+														<button style="font-size:24px" onclick="p2()" id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														</div>	
                                               </div>
                                                
-                                                  <h4>SAFETYWARE Instant Liquid Hand Sanitizer</h4>
+                                                  <h4>SAFETYWARE Instant Liquid Hand Sanitiser</h4>
                                               
                                           </div>
                                           <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">								
-                                                        <a href="prd.html?SAFETYWARE Liquid Surface Sanitizer|1">
-                                                          <img src="images/p-1.jpg" alt="" class="img-responsive">
-                                                        </a>											
+                                              <div class="product-fade">	
+											           <div class="e">
+                                                        <a href="prd.html?SAFETYWARE Liquid Surface Sanitiser">
+                                                         <center> <img src="images/pr3.png" alt="SAFETYWARE Liquid Surface Sanitiser" 
+														 class="img-responsive" style="height:250px;width:220px"></center>
+                                                        </a>
+														<button style="font-size:24px" onclick="p3()" id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														</div>															
                                               </div>
                                                
-                                                  <h4>SAFETYWARE Liquid Surface Sanitizer</h4>
+                                                  <h4>SAFETYWARE Liquid Surface Sanitiser</h4>
                                               
                                           </div>
                                           <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">								
-                                                        <a href="prd.html?SAFETYWARE Surface Sanitizing Wipes|1">
-                                                          <img src="images/p-1.jpg" alt="" class="img-responsive">
-                                                        </a>											
+                                              <div class="product-fade">
+											  <div class="e">
+                                                        <a href="prd.html?SAFETYWARE Surface Sanitising Wipes">
+                                                         <center> <img src="images/pr4.png" alt="SAFETYWARE Surface Sanitising Wipes" 
+														  class="img-responsive" style="height:250px;width:220px"></center>
+                                                        </a>
+														<button style="font-size:24px" onclick="p4()" id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														</div>															
                                               </div>
                                                
-                                                  <h4>SAFETYWARE Surface Sanitizing Wipes</h4>
+                                                  <h4>SAFETYWARE Surface Sanitising Wipes</h4>
                                               
                                           </div>
                                                      
@@ -426,7 +531,7 @@
               </div>
               <div class="footer-text">
                   <div class="container">
-                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
                   </div>
               </div>
           </div><!-- Footer -->
@@ -442,5 +547,136 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
+	
+	<script>
+	
+	function p1(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var bt = document.getElementById('t');
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	
+    modal.style.display = "block";
+    modalImg.src = 'images/100ml-1b.png';
+    modalImg.alt = img.alt;
+	
+	modalImg.style.height='1000px';
+    modalImg.style.width='1000px';
+
+    captionText.innerHTML = img.alt;
+	
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}
+	}
+	
+	function p2(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var bt = document.getElementById('t');
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	
+    modal.style.display = "block";
+    modalImg.src = 'images/100ml-2a.png';
+    modalImg.alt = img.alt;
+	
+	modalImg.style.height='1000px';
+    modalImg.style.width='1000px';
+
+    captionText.innerHTML = img.alt;
+	
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}
+	}
+	
+	function p3(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var bt = document.getElementById('t');
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	
+    modal.style.display = "block";
+    modalImg.src = 'images/100ml-3a.jpg';
+    modalImg.alt = img.alt;
+	
+	modalImg.style.height='1300px';
+    modalImg.style.width='1300px';
+
+    captionText.innerHTML = img.alt;
+	
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}
+	}
+	
+	
+	function p4(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var bt = document.getElementById('t');
+	var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	
+    modal.style.display = "block";
+    modalImg.src = 'images/100ml-1b.png';
+    modalImg.alt = img.alt;
+	
+	modalImg.style.height='1000px';
+    modalImg.style.width='1000px';
+
+    captionText.innerHTML = img.alt;
+	
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}
+	}
+	
+	
+	</script>
+	
   </body>
 </html>

@@ -52,7 +52,7 @@
   
   .megamenu{
   width:220px;
-  height:230px;
+  height:220px;
 
   }
   
@@ -154,7 +154,7 @@ text-decoration: underline blue 1px;
 													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
                                                   </ul>
                                             </div>                                
                                       </li>

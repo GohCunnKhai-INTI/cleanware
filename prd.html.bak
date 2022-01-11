@@ -312,7 +312,7 @@ text-align: justify;
  background-color: transparent;
   
   border:none;
-  color:#D3D3D3;
+  color:#C0C0C0;
 }
 
 #topr:hover{
@@ -500,7 +500,9 @@ border: 0.5px solid #DCDCDC;
 														<div class="ibg">
 														
 														<div class="zoomArea">																			
-                                                          <div class="bg"><img id="NZoomImg" alt="" data-NZoomscale="2" height="350px" width="350px"></div>
+                                                          <div class="bg">
+														  <img id="NZoomImg" alt="" data-NZoomscale="3" height="350px" width="350px">
+														  </div>
 														    <b><div id="topl"></div></b>
 														
 															<button style="font-size:24px" id="topr"> <i class="fas fa-compress"></i></button>
@@ -811,7 +813,7 @@ border: 0.5px solid #DCDCDC;
     var value1 = a[0];
     var value2 = a[1];
 
-    if (value1 == "SAFETYWARE%20Instant%20Gel%20Hand%20Sanitizer") {
+    if (value1 == "SAFETYWARE%20Instant%20Gel%20Hand%20Sanitiser") {
 
     let name = value1;
     let decoded = decodeURI(name);

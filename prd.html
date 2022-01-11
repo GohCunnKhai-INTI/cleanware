@@ -170,6 +170,7 @@
     margin-left: auto;
     margin-right: auto
 	}
+	
 	/* The Modal (background) */
 	.modal {
 	display: none; /* Hidden by default */
@@ -184,6 +185,7 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 	}
+	
 	/* Modal Content (image) */
 	.modal-content {
     margin: auto;
@@ -500,7 +502,9 @@ border: 0.5px solid #DCDCDC;
 														<div class="ibg">
 														
 														<div class="zoomArea">																			
-                                                          <div class="bg"><img id="NZoomImg" alt="" data-NZoomscale="2" height="350px" width="350px"></div>
+                                                          <div class="bg">
+														  <img id="NZoomImg" alt="" data-NZoomscale="3" height="350px" width="350px">
+														  </div>
 														    <b><div id="topl"></div></b>
 														
 															<button style="font-size:24px" id="topr"> <i class="fas fa-compress"></i></button>
@@ -811,7 +815,7 @@ border: 0.5px solid #DCDCDC;
     var value1 = a[0];
     var value2 = a[1];
 
-    if (value1 == "SAFETYWARE%20Instant%20Gel%20Hand%20Sanitizer") {
+    if (value1 == "SAFETYWARE%20Instant%20Gel%20Hand%20Sanitiser") {
 
     let name = value1;
     let decoded = decodeURI(name);
