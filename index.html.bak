@@ -49,8 +49,21 @@
   margin-top:70px;
   width:1550px;
   }
+  
   .megamenu{
-  border: 1px solid #000;
+  width:220px;
+  height:230px;
+
+  }
+  
+  .bb:hover{
+text-decoration: underline blue 1px;
+  }
+  
+  
+  .line{
+  border: 1px solid gray;
+
   }
   
   .blink_me {
@@ -60,6 +73,9 @@
   @keyframes blinker {  
   50% { opacity: 0.65; }
   }
+  
+  
+  
 
   </style>
 
@@ -92,7 +108,7 @@
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.html"><img src="images/clean-logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
 
                               <!--</div> -->                          
@@ -125,31 +141,27 @@
                                   <ul class="dropdown-menu megamenu" role="menu">
                                       <li width="20px">
                                           
-                                              <div class="mega-sub">
-											  
-                                                  <div class="mega-sub-title">Sanitiser</div>
+                                              <div class="mega-sub" style="margin-top:8px;">
 											
                                                   <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser|1">SAFETYWARE Instant Gel Hand Sanitiser</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser|1">SAFETYWARE Instant Liquid Hand Sanitiser</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser|1">SAFETYWARE Liquid Surface Sanitiser</a></li>
-													  <hr>
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes|1">SAFETYWARE Surface Sanitising Wipes</a></li>
-													  <br>
+                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser|1"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
+													 
+                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
+													
+                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
+												
+													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes|1"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
+													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
                                                   </ul>
-                                              </div>                                
+                                            </div>                                
                                       </li>
                                   </ul>
                               </li>
                               <li><a href="contact.html">Contact Us</a></li>
-							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>
-             
-                          
+							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
                           </ul>
                            
                       </div><!-- /.navbar-collapse -->
@@ -159,41 +171,14 @@
               </div>      
           </div> <!-- header -->
           
-          <div id="main-slider"> <!-- Slider -->
+          <div id="main-slider" style="width:1410px;"> <!-- Slider -->
               <div id="home-slider" class="owl-carousel owl-theme">
                   <div class="item">
-                      <img src="images/clean-logo.png" alt="slide-1" class="img-responsive">
-                      <div class="slider-desc">
-                          <div class="container">
-                              <div class="row">
-                                  <div class="col-md-6">
-                                       <div class="slide-offers-right">
-
-                                          <a href="" class="btn btn-magenta">View now</a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <a href="product.html"><img src="images/bg.png" alt="slide-1" class="img-responsive"></a>                   
                   </div>
                   <div class="item">
-                      <img src="images/slider-2.jpg" alt="slide-2" class="img-responsive">
-                      <div class="slider-desc">
-                          <div class="container">
-                              <div class="row">
-                                  <div class="col-md-6">
-                                      <div class="slide-offers-left">
-                                          <div class="slide-offers-title"><span>50% Price cut</span><br/>for online order</div>
-                                          <p>New & Fvhresh collection<br/>arraival in believe store</p>
-                                          <a href="" class="btn btn-blue">Shop now</a>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                       
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <img src="images/bg2.png" alt="slide-2" class="img-responsive">
+                   
                   </div>
               </div>
           </div> <!-- Slider -->
@@ -352,7 +337,8 @@
                                       <h4><b>Anti-bacteria</b></h4>
                                     
                                   </div>
-								    <p>Instant hand sanitizer kills 99.9% of germs that may cause illness to keep your safe from a broad spectrum of microorganisms. Rapid antimicrobial kills with 75% of alcohol content that works at the strongest disinfection effect.
+								    <p>Instant hand sanitiser kills 99.9% of germs that may cause illness to keep your safe from a broad spectrum of microorganisms. 
+									Rapid antimicrobial kills with 75% of alcohol content that works at the strongest disinfection effect.
 									  </p>
                               </div>
                               <div class="col-md-4 blog-ct">
@@ -361,7 +347,9 @@
                                       <h4><b>Rinse Free</b></h4>
                                    
                                   </div>
-								   <p>It needs no soap, water, rinsing or tower and easy to use without any constraints. It promotes convenient disinfecting option for infection prevention, which it can be used anytime, anywhere: while in care, office, handbag, picnics, nappy change, travel, sports etc.
+								   <p>It needs no soap, water, rinsing or tower and easy to use without any constraints.
+								   It promotes convenient disinfecting option for infection prevention, which it can be used anytime, anywhere: while in care, office, 
+								   handbag, picnics, nappy change, travel, sports etc.
 									  </p>
                               </div>
 							  
@@ -371,7 +359,8 @@
                                       <h4><b>Vitamin E</b></h4>
                                    
                                   </div>
-								   <p>It promotes skin health and retains smooth skin with additional of Vitamin E. Skin friendly effect provides layers of protection on your hands from harmful micro-organisms.
+								   <p>It promotes skin health and retains smooth skin with additional of Vitamin E.
+								   Skin friendly effect provides layers of protection on your hands from harmful micro-organisms.
 									  </p>
                               </div>
 		
@@ -386,7 +375,8 @@
                                       <h4><b>Moisturizing Effect</b></h4>
                                    
                                   </div>
-								   <p>With the unique formulation of our hand sanitizer, it can prevent your skin from dryness after application on the long-term usage. Instead, it leaves hands feeling soft and refreshed with emollients featured.
+								   <p>With the unique formulation of our hand sanitiser, it can prevent your skin from dryness after application on the long-term usage. 
+								   Instead, it leaves hands feeling soft and refreshed with emollients featured.
 									  </p>
                               </div>
 							  
@@ -396,7 +386,9 @@
                                       <h4><b>Quality Guaranteed</b></h4>
                                    
                                   </div>
-								   <p>To give our best in manufacturing the highest quality of hand sanitizer, we perform In-process quality check from time to time to make sure every production meets the requirement and safety level according to ISO standards. Quality control by conducting pH test and alcohol content test for each batch manufactured.
+								   <p>To give our best in manufacturing the highest quality of hand sanitiser, 
+								   we perform In-process quality check from time to time to make sure every production meets the requirement and 
+								   safety level according to ISO standards. Quality control by conducting pH test and alcohol content test for each batch manufactured.
 									  </p>
                               </div>
 							  
