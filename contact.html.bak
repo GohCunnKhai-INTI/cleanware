@@ -28,6 +28,9 @@
     <link href="css/prettyPhoto.css" rel="stylesheet">
 
 
+
+
+
   </head>
   
   <style>
@@ -58,7 +61,11 @@
 
   }
   .megamenu{
-  border: 1px solid #000;
+  width:220px;
+  height:220px;
+  }
+    .bb:hover{
+text-decoration: underline blue 1px;
   }
   .line{
   border: 1px solid #c0c0c0;
@@ -76,6 +83,73 @@
   @keyframes blinker {  
   50% { opacity: 0.65; }
   }
+  
+  p.note {
+  font-size: 1rem;
+  color: red;
+  }
+  
+  input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-family: 'Lato';
+  width: 300px;
+  margin-top: 10px;
+  }
+  
+  label {
+  width: 300px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  }
+  
+  label span {
+  font-size: 1rem;
+  }
+  
+  label.error {
+    color: red;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 5px;
+	}
+	
+  input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+	}
+	
+  [type="submit"], [type="reset"], button, html [type="button"] {
+    margin-left: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 300;
+    padding: 10px 0;
+    line-height: 1;
+	}
+	
+	#wrap {
+    width: 620px;
+	height:70px;
+    overflow: hidden; /* will contain if #first is longer than #second */
+	}
+	
+	#f {
+    width: 300px;
+    float:left; /* add this */
+	}
+	
+	#s{
+	width: 300px;
+	margin-left:320px;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+	}
+
 
   </style>
   
@@ -87,7 +161,7 @@
               <div class="top"> <!-- top -->
                   <div class="container">
                       <ul class="top-support"> 
-                          <li><span>HYGIENE & SANITIZATION</span></li>                    
+                          <li><span>HYGIENE & SANITISATION</span></li>                    
                       </ul>
                       <div class="top-control">
                           <a href="faq.html">FAQs</a>
@@ -109,37 +183,11 @@
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.html"><img src="images/clean-logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
 
-                                  <!-- Collect the nav links, forms, and other content for toggling -->
-                                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                                  
-                                      <ul class="nav navbar-nav navbar-right">
-                                          <li class="menu-search-form">
-                                              <a href="#" id="open-srch-form"><img src="images/srch.png" alt="srch"></a>
-                                          </li>
-                                          <li id="open-srch-form-mod">
-                                              <div>
-                                                  <form class="side-search">
-                                                      <div class="input-group">
-                                                          <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon1">
-                                                          <a href="" class="input-group-addon btn-side-serach" id="basic-addon1"><i class="fa fa-search"></i></a>
-                                                      </div>
-                                                  </form>
-                                              </div>
-                                          </li>
-                                      </ul>                                   
-                                  </div><!-- /.navbar-collapse -->
                               <!--</div> -->                          
                           </nav>
-                      </div>
-                      <div class="srch-form">
-                          <form class="side-search">
-                              <div class="input-group">
-                                  <input type="text" class="form-control search-wid" placeholder="Search Here" aria-describedby="basic-addon2">
-                                  <a href="" class="input-group-addon btn-side-serach" id="basic-addon2"><i class="fa fa-search"></i></a>
-                              </div>
-                          </form>
                       </div>
                   </div>
               </div> <!-- Nav -->
@@ -163,37 +211,33 @@
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                              <li class=""><a href="index.html">Home</a></li>
+                              <li class="active"><a href="index.html">Home</a></li>
                               <li class="dropdown menu-large">
                                   <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product <i class="fa fa-angle-down"></i></a>
                                   <ul class="dropdown-menu megamenu" role="menu">
                                       <li width="20px">
                                           
-                                              <div class="mega-sub">
-											  
-                                                  <div class="mega-sub-title">Sanitizer</div>
+                                              <div class="mega-sub" style="margin-top:8px;">
 											
                                                   <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitizer|1">SAFETYWARE Instant Gel Hand Sanitizer</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitizer|1">SAFETYWARE Instant Liquid Hand Sanitizer</a></li>
-													  <hr>
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitizer|1">SAFETYWARE Liquid Surface Sanitizer</a></li>
-													  <hr>
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitizing Wipes|1">SAFETYWARE Surface Sanitizing Wipes</a></li>
-													  <br>
+                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
+													 
+                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
+													
+                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
+												
+													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
+													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp View All ></a></li>
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
                                                   </ul>
-                                              </div>                                
+                                            </div>                                
                                       </li>
                                   </ul>
                               </li>
-                              <li class="active"><a href="contact.html">Contact Us</a></li>
-							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>
-             
-                          
+                              <li><a href="contact.html" class="active">Contact Us</a></li>
+							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
                           </ul>
                            
                       </div><!-- /.navbar-collapse -->
@@ -340,34 +384,128 @@
 								  <br/><br/>
 
                           </div>
+	  
+	  
+						
                           <div class="col-md-1">
                           </div>
-                          <div class="col-md-5 ct-form">
+                          <div class="col-md-5 ct-form" style="width:650px">
                               <span style="font-size:22px"><b>Inquiry Form</b></span>
 							  <h5 id="if">Thanks for your interest in Cleanware. Please do not hesitate to contact us if you have any questions about our products and services. We will get back to you as soon as possible.</h5>
-                              <br>
-                              <form class="contact-form" action="contact.php" method="post">
+                            
+                              <form id="basic-form" onsubmit="sub();" method="post" enctype="text/plain">
                                   <div class="form-group">
-                                      <label for="cf_name">Your Name*</label>
-                                      <input type="text" class="form-control" name="cf_name" id="cf_name" placeholder="">
+								  
+                                      <label for="email">Email<span style="color:red;font-size: 23px;">*</span></label>
+                                      <input type="email" class="form-control" name="Email" id="email" placeholder="" required>
                                   </div>
+								  
+								  <div class="form-group">
+                                      
+                                      <label for="name">First name<span style="color:red;font-size: 23px;">* </span></label>&nbsp&nbsp&nbsp&nbsp
+									  <label for="name2">Last name<span style="color:red;font-size: 23px;">*</span></label>
+                                      
+									  <div id="wrap">
+									  <div id="f">
+                                      <input class="form-control" name="First Name" id="name" style="width:300px" placeholder="" required />
+									  </div>
+									  <div id="s">
+									  <input class="form-control" name="Last Name" id="name2"style="width:300px;" placeholder="" required />
+                                      </div>
+									  </div>
+								  </div>
 
                                   <div class="form-group">
-                                      <label for="cf_email">Your E-mail*</label>
-                                      <input type="email" class="form-control" name="cf_email" id="cf_email" placeholder="">
-                                  </div>
+                                      
+                                      <label for="name3">Company name<span style="color:red;font-size: 23px;">* </span></label>&nbsp&nbsp&nbsp&nbsp
+									  <label for="name4">Job Title<span style="color:red;font-size: 23px;">*</span></label>
+                                      
+									  <div id="wrap">
+									  <div id="f">
+                                      <input class="form-control" name="Company Name" id="name3" style="width:300px" placeholder="" required />
+									  </div>
+									  <div id="s">
+									  <input class="form-control" name="Job Title" id="name4"style="width:300px;" placeholder="" required />
+                                      </div>
+									  </div>
+								  </div>
 
                                   <div class="form-group">
-                                      <label for="cf_subject">Subject*</label>
-                                      <input type="tel" class="form-control" name="cf_subject" id="cf_subject" placeholder="">
+                                      <label for="cf_message">Company Type<span style="color:red;font-size: 23px;">*</span></label><br>
+									  <input type="radio" id="chkNo" name="Company Type" value="Distributors/Dealers" onclick="ShowHideDiv()" checked>
+									  <label for="dd">Distributors / Dealers</label><br>
+									  <input type="radio" id="chkNo2" name="Company Type" value="End-Users/Factories" onclick="ShowHideDiv()">
+									  <label for="ef">End-Users / Factories</label><br>  
+									  <input type="radio" id="chkYes" name="Company Type" value="Other" onclick="ShowHideDiv()">
+									  <label for="chkYes">Other, please specify :</label>
+									  
+									  <div id="dvtext" style="display: none">
+									 <label for="cf_message"> Other company type:<span style="color:red;font-size: 23px;">*</span></label>
+									  <input type="text"  name="Other company type" class="form-control" id="txtBox" required />
+									  </div>
+                                      
                                   </div>
-
-                                  <div class="form-group">
-                                      <label for="cf_message">Message*</label>
-                                      <textarea class="form-control" name="cf_message" id="cf_message"></textarea>
+								  
+								  <div class="form-group">
+								  
+                                      <label for="address">Street address<span style="color:red;font-size: 23px;">*</span></label>
+                                      <input class="form-control" name="Street Address" id="addr" placeholder="" required>
                                   </div>
+								  
+								  <div class="form-group">
+                                      
+                                      <label for="name5">City<span style="color:red;font-size: 23px;">* </span></label>&nbsp&nbsp&nbsp&nbsp
+									  <label for="name6">State/Region<span style="color:red;font-size: 23px;">*</span></label>
+                                      
+									  <div id="wrap">
+									  <div id="f">
+                                      <input class="form-control" name="City" id="name5" style="width:300px" placeholder="" required />
+									  </div>
+									  <div id="s">
+									  <input class="form-control" name="State/Region" id="name6"style="width:300px;" placeholder="" required />
+                                      </div>
+									  </div>
+								  </div>
+								  
+								  <div class="form-group">
+                                      
+                                      <label for="name7">Country/Region<span style="color:red;font-size: 23px;">* </span></label>&nbsp&nbsp&nbsp&nbsp
+									  <label for="name8">Postal Code<span style="color:red;font-size: 23px;">*</span></label>
+                                      
+									  <div id="wrap">
+									  <div id="f">
+                                      <input class="form-control" name="Country/Region" id="name7" style="width:300px" placeholder="" required />
+									  </div>
+									  <div id="s">
+									  <input class="form-control" name="Postal Code" id="name8"style="width:300px;" placeholder="" required />
+                                      </div>
+									  </div>
+								  </div>
+								  
+								  <div class="form-group">
+                                      
+                                      <label for="name9">Mobile phone number<span style="color:red;font-size: 23px;">* </span></label>&nbsp&nbsp&nbsp&nbsp
+									  <label for="name10">Fax Number<span style="color:red;font-size: 23px;">*</span></label>
+                                      
+									  <div id="wrap">
+									  <div id="f">
+                                      <input class="form-control" type="tel" name="Mobile phone number" id="name9" style="width:300px" placeholder="" required />
+									  </div>
+									  <div id="s">
+									  <input class="form-control" type="tel" name="Fax number" id="name10"style="width:300px;" placeholder="" required />
+                                      </div>
+									  </div>
+								  </div>
+								  
+								  
+								  <div class="form-group">
+                                      <label for="cf_message">Message<span style="color:red;font-size: 23px;">*</span></label>
+                                      <textarea class="form-control" name="message" id="cf_message" style="max-width:100%;resize:none;"rows="5" cols="50"  
+									   required></textarea>
+                                  </div>
+								  <br>
 
-                                  <button type="submit" class="btn btn-blue">Submit</button>
+                                  <button type="submit" class="btn btn-black" style="width:100px;text-align:center" >Submit</button>
                               </form>
                           </div>						  						 
                       </div>
@@ -592,10 +730,6 @@
                           </div>						 
                       </div>
                   </div>
-              </div>
-
-                  </div>
-              </div>
 
           </div> <!-- Content -->
           
@@ -737,7 +871,7 @@
               </div>
               <div class="footer-text">
                   <div class="container">
-                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
                   </div>
               </div>
           </div><!-- Footer -->
@@ -754,6 +888,129 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
+
+	
+	
+	<!-- validation -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	
+
+
+
+	<script>
+	function sub() {
+	
+	var email = document.getElementById("email").value;
+	var fname = document.getElementById("name").value;
+	var lname = document.getElementById("name2").value;
+	var comp = document.getElementById("name3").value;
+	var jt = document.getElementById("name4").value;
+	
+	var addr = document.getElementById("addr").value;
+	var city = document.getElementById("name5").value;
+	var sr = document.getElementById("name6").value;
+	var cr = document.getElementById("name7").value;
+	var postal = document.getElementById("name8").value;
+	var mob = document.getElementById("name9").value;
+	var fax = document.getElementById("name10").value;
+	
+	var msg=document.getElementById("cf_message").value;
+	
+	 var chkYes = document.getElementById("chkYes");
+	 var chkNo = document.getElementById("chkNo");
+	 var chkNo2 = document.getElementById("chkNo2");
+	  var inputF = document.getElementById("txtBox");
+	  var tb="";
+	  
+	  
+	 if(chkYes.checked)
+	 {
+		tb="other type-"+document.getElementById("txtBox").value;
+	 }
+	 else if(chkNo.checked)
+	 {
+		tb = document.getElementById("chkNo").value;
+	 }
+	 else if(chkNo2.checked)
+	 {
+	    tb = document.getElementById("chkNo2").value;
+	 }
+	
+	
+	
+	
+	 var et = false;
+
+	 var mailformat="@";
+	 
+	 if(email.indexOf(mailformat))
+	 {
+	 et=true;
+	 }
+	 else
+	 {
+	 et=false;
+	 }
+	
+	
+	 if(fname=="" || email==""|| lname==""|| comp==""||
+	 jt==""||addr==""||city==""||sr==""||cr==""||postal==""||mob==""||fax==""||msg=="")
+	 {
+	  
+	 }
+	 else{
+	
+	 window.location.href = "mailto:alevesgoh123@gmail.com?body=Email : "+email+"%0D%0A"+"First Name : "+fname
+	 +"%0D%0A"+"Last Name : "+lname+"%0D%0A"+"Company Name : "+comp+"%0D%0A"+"Job Title : "+jt+"%0D%0A"+"Company Type : "+tb
+	 +"%0D%0A"+"Street Name : "+addr
+	 +"%0D%0A"+"City : "+city+"%0D%0A"+"State/Region : "+sr+"%0D%0A"+"Country/Region : "+cr+"%0D%0A"+"Postal Code : "+postal
+	 +"%0D%0A"+"Mobile phone number : "+mob+"%0D%0A"+"Fax Number : "+fax+"%0D%0A"+"Message : "+msg;
+	 
+	 window.location.reload();
+
+	 }
+	 
+	 
+	}
+	
+	 var chkYes = document.getElementById("chkYes");
+	 var inputF = document.getElementById("txtBox");
+		if(chkYes.checked)
+		{
+		 inputF.value = "";
+		}
+		else
+		{
+		inputF.value = "N/a";
+
+		}
+		
+	function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var dvtext = document.getElementById("dvtext");
+		var inputF = document.getElementById("txtBox");
+        dvtext.style.display = chkYes.checked ? "block" : "none";
+		
+		if(chkYes.checked)
+		{
+		 inputF.value = "";
+		}
+		else
+		{
+		inputF.value = "N/a";
+
+		}
+    }
+	</script>
+
+	<script>
+	$(document).ready(function() {
+	$("#basic-form").validate();
+	});
+ 
+    </script>
     <script>
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');
@@ -772,5 +1029,6 @@
             }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+
   </body>
 </html>
