@@ -1424,9 +1424,9 @@ border: 0.5px solid #DCDCDC;
 	img.onclick = function(){
     modal.style.display = "block";
     modalImg.src = 'images/100ml-2a.png';
-    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitizer (100 ml)';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitiser (100 ml)';
 
-    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitizer (100 ml)';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitiser (100 ml)';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1807,24 +1807,27 @@ border: 0.5px solid #DCDCDC;
 
     }//fourth
 	else if(value1 == "SAFETYWARE%20Surface%20Sanitising%20Wipes"){
- let name = value1;
+
+    let name = value1;
 	let decoded = decodeURI(name);
     document.getElementById("name").innerHTML = decoded;
-	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
-    document.getElementById("name22").innerHTML = "(500ml , 5 Ltr, 20 Ltr)";
+	document.getElementById("name2").innerHTML = "Effectively eliminates 99.99% of harmful germs on hard surfaces";
+    document.getElementById("name22").innerHTML = "(200mm x 150mm size of wipe)";
+
+    
+	document.getElementById("name3").innerHTML = "Type: Pull out";
+	document.getElementById("name4").innerHTML = "Unit: Canister";
+	document.getElementById("topl").innerHTML = "200mm x 150mm";
+	document.getElementById('NZoomImg').src = "images/Sanitising Wipes-01.jpg";
 	
-	document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
-	document.getElementById("name4").innerHTML = "Unit: Bottle";
-	document.getElementById("topl").innerHTML = "500 ml";
-	document.getElementById('NZoomImg').src = "images/500ml-3a.jpg";
 	
 	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Gel Hand Sanitiser";
 	document.getElementById("mlike2").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitiser";
-	document.getElementById("mlike3").innerHTML = "SAFETYWARE Surface Sanitising Wipes";
+	document.getElementById("mlike3").innerHTML = "SAFETYWARE Liquid Surface Sanitiser";
 	
 	document.getElementById('img2').style.backgroundImage = "url('images/pr1.png')";
 	document.getElementById('img3').style.backgroundImage = "url('images/pr2.png')";
-	document.getElementById('img4').style.backgroundImage = "url('images/pr4.png')";
+	document.getElementById('img4').style.backgroundImage = "url('images/pr3.png')";
 	
 	
 	function next(){
@@ -1834,20 +1837,16 @@ border: 0.5px solid #DCDCDC;
     window.location.href = "prd.html?SAFETYWARE Instant Liquid Hand Sanitiser";
 	}
 	function next3(){
-    window.location.href = "prd.html?SAFETYWARE Surface Sanitising Wipes";
+    window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitiser";
 	}
 	
 	gall2=document.getElementById("gall");
-	gall2.innerHTML+='<div id="page"><img src="images/c1.png" onclick="abc()"></ div>';
-	gall2.innerHTML+='<div id="page2"><img src="images/c2.png" onclick="abc2()"></ div>';
-	gall2.innerHTML+='<div id="page3"><img src="images/c3.png" onclick="abc3()"></ div>';
+	gall2.innerHTML+='<div id="page"><img src="images/d1.png" onclick="abc()"></ div>';
 	
 	function abc(){
- 	document.getElementById('NZoomImg').src = 'images/500ml-3a.jpg';
+ 	document.getElementById('NZoomImg').src = 'images/Sanitising Wipes-01.jpg';
 	document.getElementById("page").style.borderColor = "#000000";
-	document.getElementById("page2").style.borderColor = "#DCDCDC";
-	document.getElementById("page3").style.borderColor = "#DCDCDC";
-	document.getElementById("topl").innerHTML = "500 ml";
+	document.getElementById("topl").innerHTML = "200mm x 150mm";
 	
 	// Get the modal
 	var modal = document.getElementById('myModal');
@@ -1859,75 +1858,9 @@ border: 0.5px solid #DCDCDC;
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/500ml-3a.jpg';
-    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
-    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (500 ml) ';
-	}
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}    
-	 
-	}
-	
-	function abc2(){
- 	document.getElementById('NZoomImg').src = 'images/5000ml-3a.jpg';
-	document.getElementById("page").style.borderColor = "#DCDCDC";
-	document.getElementById("page2").style.borderColor = "#000000";
-	document.getElementById("page3").style.borderColor = "#DCDCDC";
-	document.getElementById("topl").innerHTML = "5000 ml";
-	
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('topr');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	
-	img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = 'images/5000ml-3a.jpg';
-    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (5000 ml)';
-    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (5000 ml) ';
-	}
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}    
-	 
-	}
-	
-	function abc3(){
- 	document.getElementById('NZoomImg').src = 'images/20L-3a.jpg';
-	document.getElementById("page").style.borderColor = "#DCDCDC";
-	document.getElementById("page2").style.borderColor = "#DCDCDC";
-	document.getElementById("page3").style.borderColor = "#000000";
-	document.getElementById("topl").innerHTML = "5000 ml";
-	
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('topr');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	
-	img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = 'images/20L-3a.jpg';
-    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (20L)';
-    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (20L) ';
+    modalImg.src = 'images/Sanitising Wipes-01.jpg';
+    modalImg.alt = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe)';
+    captionText.innerHTML = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe) ';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1952,10 +1885,10 @@ border: 0.5px solid #DCDCDC;
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/500ml-3a.jpg';
-    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
+    modalImg.src = 'images/Sanitising Wipes-01.jpg';
+    modalImg.alt = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe)';
 
-    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
+    captionText.innerHTML = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe)';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1968,7 +1901,7 @@ border: 0.5px solid #DCDCDC;
 	} 
 	
 	let text = "Buy It Now";	
-	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Liquid+Surface+Sanitizer&type=product");
+	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Surface+Sanitizing+Wipes&type=product");
     document.getElementById("web").innerHTML = result; 
 	
 	let table = document.createElement('table');
@@ -2001,15 +1934,15 @@ border: 0.5px solid #DCDCDC;
 	// Creating and adding data to second row of the table
 	let row_2 = document.createElement('tr');
 	let row_2_data_1 = document.createElement('td');
-	row_2_data_1.innerHTML = "ASS0100500";
+	row_2_data_1.innerHTML = "HWP01100WHT01";
 	let row_2_data_2 = document.createElement('td');
-	row_2_data_2.innerHTML = "500ml, Rinse-Free & Non-Sticky, Kills 99.99% of Germs";
+	row_2_data_2.innerHTML = "200mm x 150mm size of wipe, effectively eliminates 99.99% of harmful germs on hard surfaces.";
 	let row_2_data_3 = document.createElement('td');
-	row_2_data_3.innerHTML = "Spray Head";
+	row_2_data_3.innerHTML = "Pull out";
 	let row_2_data_4 = document.createElement('td');
-	row_2_data_4.innerHTML = "Each";
+	row_2_data_4.innerHTML = "100pcs / Canister";
 	let row_2_data_5 = document.createElement('td');
-	row_2_data_5.innerHTML = "Bottle";
+	row_2_data_5.innerHTML = "Canister";
 	
 	row_2.appendChild(row_2_data_1);
 	row_2.appendChild(row_2_data_2);
@@ -2017,46 +1950,6 @@ border: 0.5px solid #DCDCDC;
 	row_2.appendChild(row_2_data_4);
 	row_2.appendChild(row_2_data_5);
 	tbody.appendChild(row_2);
-	
-	// Creating and adding data to third row of the table
-	let row_3 = document.createElement('tr');
-	let row_3_data_1 = document.createElement('td');
-	row_3_data_1.innerHTML = "ASS0105000";
-	let row_3_data_2 = document.createElement('td');
-	row_3_data_2.innerHTML = "5 Ltr, Rinse-Free & Non-Sticky, Kills 99.99% of Germs";
-	let row_3_data_3 = document.createElement('td');
-	row_3_data_3.innerHTML = "Cap";
-	let row_3_data_4 = document.createElement('td');
-	row_3_data_4.innerHTML = "Each";
-	let row_3_data_5 = document.createElement('td');
-	row_3_data_5.innerHTML = "Bottle";
-	
-	row_3.appendChild(row_3_data_1);
-	row_3.appendChild(row_3_data_2);
-	row_3.appendChild(row_3_data_3);
-	row_3.appendChild(row_3_data_4);
-	row_3.appendChild(row_3_data_5);
-	tbody.appendChild(row_3);
-	
-	// Creating and adding data to third row of the table
-	let row_4 = document.createElement('tr');
-	let row_4_data_1 = document.createElement('td');
-	row_4_data_1.innerHTML = "ASS0120000";
-	let row_4_data_2 = document.createElement('td');
-	row_4_data_2.innerHTML = "20 Ltr, Rinse-Free & Non-Sticky, Kills 99.99% of Germs";
-	let row_4_data_3 = document.createElement('td');
-	row_4_data_3.innerHTML = "Cap";
-	let row_4_data_4 = document.createElement('td');
-	row_4_data_4.innerHTML = "Each";
-	let row_4_data_5 = document.createElement('td');
-	row_4_data_5.innerHTML = "Bottle";
-	
-	row_4.appendChild(row_4_data_1);
-	row_4.appendChild(row_4_data_2);
-	row_4.appendChild(row_4_data_3);
-	row_4.appendChild(row_4_data_4);
-	row_4.appendChild(row_4_data_5);
-	tbody.appendChild(row_4);
 
     }
 
