@@ -424,13 +424,13 @@ border: 0.5px solid #DCDCDC;
                                               <div class="mega-sub" style="margin-top:8px;">
 											
                                                   <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser|1"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
+                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
 													 
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
+                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
 													
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser|1"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
+                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
 												
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes|1"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
+													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
 													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -1242,49 +1242,191 @@ border: 0.5px solid #DCDCDC;
 	let decoded = decodeURI(name);
     document.getElementById("name").innerHTML = decoded;
 	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
-    document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
+    document.getElementById("name22").innerHTML = "(100ml , 500ml , 5 Ltr, 20 Ltr)";
+	document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
 	document.getElementById("name4").innerHTML = "Unit: Bottle";
-	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
-	let text = "Buy It Now";	
-	let result = text.link("https://shop.safetyware.com.my/collections/home-safety-products/products/safetyware-hsl0100050-pocket-size-instant-hand-sanitizer-liquid-50ml-1?variant=41568563298468");
-    document.getElementById("web").innerHTML = result; 
+	document.getElementById("topl").innerHTML = "100 ml";
+	document.getElementById('NZoomImg').src = "images/100ml-2a.png";
 	
+
 	
 	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Gel Hand Sanitiser";
 	document.getElementById("mlike2").innerHTML = "SAFETYWARE Liquid Surface Sanitiser";
 	document.getElementById("mlike3").innerHTML = "SAFETYWARE Surface Sanitising Wipes";
 	
-	document.getElementById('img2').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img3').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img4').style.backgroundImage = "url('images/clean-logo.png')";
+	document.getElementById('img2').style.backgroundImage = "url('images/pr1.png')";
+	document.getElementById('img3').style.backgroundImage = "url('images/pr3.png')";
+	document.getElementById('img4').style.backgroundImage = "url('images/pr4.png')";
 	
 	
 	function next(){
-    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitiser|1";
+    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitiser";
 	}
 	function next2(){
-    window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitiser|1";
+    window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitiser";
 	}
 	function next3(){
-    window.location.href = "prd.html?SAFETYWARE Surface Sanitising Wipes|1";
+    window.location.href = "prd.html?SAFETYWARE Surface Sanitising Wipes";
 	}
 	
+	gall2=document.getElementById("gall");
+	gall2.innerHTML+='<div id="page"><img src="images/b1.png" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page2"><img src="images/b2.png" onclick="abc2()"></ div>';
+	gall2.innerHTML+='<div id="page3"><img src="images/b3.png" onclick="abc3()"></ div>';
+	gall2.innerHTML+='<div id="page4"><img src="images/b4.png" onclick="abc4()"></ div>';
+	
+	function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/100ml-2a.png';
+	document.getElementById("page").style.borderColor = "#000000";
+	document.getElementById("page2").style.borderColor = "#DCDCDC";
+	document.getElementById("page3").style.borderColor = "#DCDCDC";
+	document.getElementById("page4").style.borderColor = "#DCDCDC";
+	document.getElementById("topl").innerHTML = "100 ml";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/100ml-2a.png';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitiser (100 ml)';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitiser (100 ml) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	function abc2(){
+ 	document.getElementById('NZoomImg').src = 'images/500ml-2a.png';
+	document.getElementById("page").style.borderColor = "#DCDCDC";
+	document.getElementById("page2").style.borderColor = "#000000";
+	document.getElementById("page3").style.borderColor = "#DCDCDC";
+	document.getElementById("page4").style.borderColor = "#DCDCDC";
+	document.getElementById("topl").innerHTML = "500 ml";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/500ml-2a.png';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitiser (500 ml)';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitiser (500 ml) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	function abc3(){
+ 	document.getElementById('NZoomImg').src = 'images/5L.png';
+	document.getElementById("page").style.borderColor = "#DCDCDC";
+	document.getElementById("page2").style.borderColor = "#DCDCDC";
+	document.getElementById("page3").style.borderColor = "#000000";
+	document.getElementById("page4").style.borderColor = "#DCDCDC";
+	document.getElementById("topl").innerHTML = "5L";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/5L.png';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitiser (5L)';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitiser (5L) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	
+	function abc4(){
+ 	document.getElementById('NZoomImg').src = 'images/20L-2a.png';
+	document.getElementById("page").style.borderColor = "#DCDCDC";
+	document.getElementById("page2").style.borderColor = "#DCDCDC";
+	document.getElementById("page3").style.borderColor = "#DCDCDC";
+	document.getElementById("page4").style.borderColor = "#000000";
+	document.getElementById("topl").innerHTML = "20L";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/20L-2a.png';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitiser (20L)';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitiser (20L) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
 	
 	
 	// Get the modal
 	var modal = document.getElementById('myModal');
 	
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('img');
+	var img = document.getElementById('topr');
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/clean-logo.png';
-    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitizer';
+    modalImg.src = 'images/100ml-2a.png';
+    modalImg.alt = 'SAFETYWARE Instant Liquid Hand Sanitizer (100 ml)';
 
-    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitizer';
+    captionText.innerHTML = 'SAFETYWARE Instant Liquid Hand Sanitizer (100 ml)';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1296,6 +1438,9 @@ border: 0.5px solid #DCDCDC;
      }, 400);
 	} 
 		
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/collections/home-safety-products/products/safetyware-hsl0100050-pocket-size-instant-hand-sanitizer-liquid-50ml-1?variant=41568563298468");
+    document.getElementById("web").innerHTML = result; 	
 	
 	let table = document.createElement('table');
 	let thead = document.createElement('thead');
@@ -1407,53 +1552,157 @@ border: 0.5px solid #DCDCDC;
 	
 
     }//third
-	else if(value1 == "SAFETYWARE%20Liquid%20Surface%20Sanitizer"){
+	else if(value1 == "SAFETYWARE%20Liquid%20Surface%20Sanitiser"){
 
     let name = value1;
 	let decoded = decodeURI(name);
     document.getElementById("name").innerHTML = decoded;
 	document.getElementById("name2").innerHTML = "Rinse-Free & Non-Sticky, Kills 99.9% Germs";
-    document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
+    document.getElementById("name22").innerHTML = "(500ml , 5 Ltr, 20 Ltr)";
+	
+	document.getElementById("name3").innerHTML = "Type: Spray Head, Cap";
 	document.getElementById("name4").innerHTML = "Unit: Bottle";
-	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
-	let text = "Buy It Now";	
-	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Liquid+Surface+Sanitizer&type=product");
-    document.getElementById("web").innerHTML = result; 
+	document.getElementById("topl").innerHTML = "500 ml";
+	document.getElementById('NZoomImg').src = "images/500ml-3a.jpg";
 	
+	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Gel Hand Sanitiser";
+	document.getElementById("mlike2").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitiser";
+	document.getElementById("mlike3").innerHTML = "SAFETYWARE Surface Sanitising Wipes";
 	
-	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Gel Hand Sanitizer";
-	document.getElementById("mlike2").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitizer";
-	document.getElementById("mlike3").innerHTML = "SAFETYWARE Surface Sanitizing Wipes";
-	
-	document.getElementById('img2').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img3').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img4').style.backgroundImage = "url('images/clean-logo.png')";
+	document.getElementById('img2').style.backgroundImage = "url('images/pr1.png')";
+	document.getElementById('img3').style.backgroundImage = "url('images/pr2.png')";
+	document.getElementById('img4').style.backgroundImage = "url('images/pr4.png')";
 	
 	
 	function next(){
-    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitizer|1";
+    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitiser";
 	}
 	function next2(){
-    window.location.href = "prd.html?SAFETYWARE Instant Liquid Hand Sanitizer|1";
+    window.location.href = "prd.html?SAFETYWARE Instant Liquid Hand Sanitiser";
 	}
 	function next3(){
-    window.location.href = "prd.html?SAFETYWARE Surface Sanitizing Wipes|1";
+    window.location.href = "prd.html?SAFETYWARE Surface Sanitising Wipes";
 	}
+	
+	gall2=document.getElementById("gall");
+	gall2.innerHTML+='<div id="page"><img src="images/c1.png" onclick="abc()"></ div>';
+	gall2.innerHTML+='<div id="page2"><img src="images/c2.png" onclick="abc2()"></ div>';
+	gall2.innerHTML+='<div id="page3"><img src="images/c3.png" onclick="abc3()"></ div>';
+	
+	function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/500ml-3a.jpg';
+	document.getElementById("page").style.borderColor = "#000000";
+	document.getElementById("page2").style.borderColor = "#DCDCDC";
+	document.getElementById("page3").style.borderColor = "#DCDCDC";
+	document.getElementById("topl").innerHTML = "500 ml";
 	
 	// Get the modal
 	var modal = document.getElementById('myModal');
 	
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('img');
+	var img = document.getElementById('topr');
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/clean-logo.png';
-    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitizer';
+    modalImg.src = 'images/500ml-3a.jpg';
+    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
+    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (500 ml) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	function abc2(){
+ 	document.getElementById('NZoomImg').src = 'images/5000ml-3a.jpg';
+	document.getElementById("page").style.borderColor = "#DCDCDC";
+	document.getElementById("page2").style.borderColor = "#000000";
+	document.getElementById("page3").style.borderColor = "#DCDCDC";
+	document.getElementById("topl").innerHTML = "5000 ml";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/5000ml-3a.jpg';
+    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (5000 ml)';
+    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (5000 ml) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	function abc3(){
+ 	document.getElementById('NZoomImg').src = 'images/20L-3a.jpg';
+	document.getElementById("page").style.borderColor = "#DCDCDC";
+	document.getElementById("page2").style.borderColor = "#DCDCDC";
+	document.getElementById("page3").style.borderColor = "#000000";
+	document.getElementById("topl").innerHTML = "5000 ml";
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/20L-3a.jpg';
+    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (20L)';
+    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (20L) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/500ml-3a.jpg';
+    modalImg.alt = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
 
-    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitizer';
+    captionText.innerHTML = 'SAFETYWARE Liquid Surface Sanitiser (500 ml)';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1464,6 +1713,10 @@ border: 0.5px solid #DCDCDC;
        img01.className = "modal-content";
      }, 400);
 	} 
+	
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Liquid+Surface+Sanitizer&type=product");
+    document.getElementById("web").innerHTML = result; 
 	
 	let table = document.createElement('table');
 	let thead = document.createElement('thead');
@@ -1553,52 +1806,89 @@ border: 0.5px solid #DCDCDC;
 	tbody.appendChild(row_4);
 
     }//fourth
-	else if(value1 == "SAFETYWARE%20Surface%20Sanitizing%20Wipes"){
+	else if(value1 == "SAFETYWARE%20Surface%20Sanitising%20Wipes"){
 
     let name = value1;
 	let decoded = decodeURI(name);
     document.getElementById("name").innerHTML = decoded;
 	document.getElementById("name2").innerHTML = "Effectively eliminates 99.99% of harmful germs on hard surfaces";
-    document.getElementById("name3").innerHTML = "Type: Pull out";
+    document.getElementById("name22").innerHTML = "(200mm x 150mm size of wipe)";
+
+    document.getElementById("topl").innerHTML = "200mm x 150mm";
+	document.getElementById("name3").innerHTML = "Type: Pull out";
 	document.getElementById("name4").innerHTML = "Unit: Canister";
-	document.getElementById('img').style.backgroundImage = "url('images/clean-logo.png')";
-	let text = "Buy It Now";	
-	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Surface+Sanitizing+Wipes&type=product");
-    document.getElementById("web").innerHTML = result; 
+	
+	document.getElementById('NZoomImg').src = "images/Sanitising Wipes-01.jpg";
+	
 	
 	document.getElementById("mlike").innerHTML = "SAFETYWARE Instant Gel Hand Sanitizer";
 	document.getElementById("mlike2").innerHTML = "SAFETYWARE Instant Liquid Hand Sanitizer";
 	document.getElementById("mlike3").innerHTML = "SAFETYWARE Liquid Surface Sanitizer";
 	
-	document.getElementById('img2').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img3').style.backgroundImage = "url('images/clean-logo.png')";
-	document.getElementById('img4').style.backgroundImage = "url('images/clean-logo.png')";
+	document.getElementById('img2').style.backgroundImage = "url('images/pr1.png')";
+	document.getElementById('img3').style.backgroundImage = "url('images/pr2.png')";
+	document.getElementById('img4').style.backgroundImage = "url('images/pr3.png')";
 	
 	
 	function next(){
-    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitizer|1";
+    window.location.href = "prd.html?SAFETYWARE Instant Gel Hand Sanitiser";
 	}
 	function next2(){
-    window.location.href = "prd.html?SAFETYWARE Instant Liquid Hand Sanitizer|1";
+    window.location.href = "prd.html?SAFETYWARE Instant Liquid Hand Sanitiser";
 	}
 	function next3(){
-    window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitizer|1";
+    window.location.href = "prd.html?SAFETYWARE Liquid Surface Sanitiser";
 	}
+	
+	gall2=document.getElementById("gall");
+	gall2.innerHTML+='<div id="page"><img src="images/d1.png" onclick="abc()"></ div>';
+	
+	function abc(){
+ 	document.getElementById('NZoomImg').src = 'images/Sanitising Wipes-01.jpg';
+	document.getElementById("page").style.borderColor = "#000000";
+	document.getElementById("topl").innerHTML = "200mm x 150mm";
 	
 	// Get the modal
 	var modal = document.getElementById('myModal');
 	
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var img = document.getElementById('img');
+	var img = document.getElementById('topr');
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	
 	img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = 'images/clean-logo.png';
-    modalImg.alt = 'SAFETYWARE Surface Sanitizing Wipes';
+    modalImg.src = 'images/Sanitising Wipes-01.jpg';
+    modalImg.alt = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe)';
+    captionText.innerHTML = 'SAFETYWARE Surface Sanitising Wipes (200mm x 150mm size of wipe) ';
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}    
+	 
+	}
+	
+	
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('topr');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = 'images/Sanitising Wipes-01.jpg';
+    modalImg.alt = 'SAFETYWARE Surface Sanitizing Wipes (200mm x 150mm size of wipe)';
 
-    captionText.innerHTML = 'SAFETYWARE Surface Sanitizing Wipes';
+    captionText.innerHTML = 'SAFETYWARE Surface Sanitizing Wipes (200mm x 150mm size of wipe)';
 	}
 	
 	// When the user clicks on <span> (x), close the modal
@@ -1610,6 +1900,9 @@ border: 0.5px solid #DCDCDC;
      }, 400);
 	} 
 	
+	let text = "Buy It Now";	
+	let result = text.link("https://shop.safetyware.com.my/search?q=SAFETYWARE+Surface+Sanitizing+Wipes&type=product");
+    document.getElementById("web").innerHTML = result; 
 	
 	let table = document.createElement('table');
 	let thead = document.createElement('thead');
@@ -1659,12 +1952,6 @@ border: 0.5px solid #DCDCDC;
 	tbody.appendChild(row_2);
 
     }
-	
-	
-	
-	
-	
-
 
     </script>
 	

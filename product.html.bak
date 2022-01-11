@@ -656,7 +656,7 @@
 	
 	
     modal.style.display = "block";
-    modalImg.src = 'images/100ml-1b.png';
+    modalImg.src = 'images/Sanitising Wipes-01.jpg';
     modalImg.alt = img.alt;
 	
 	modalImg.style.height='1000px';
