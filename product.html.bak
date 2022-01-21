@@ -1,3 +1,18 @@
+
+<?php
+require_once "dbConnection.php";
+
+$fc=mysqli_query("SELECT * FROM web");
+
+while($row=mysqli_fetch_assoc($fc))
+{
+ $cc=$row['count'];
+ $nc= $cc+1;
+ $uc=mysqli_query("update web set count=$nc");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	 <link rel="icon" type="image/x-icon" href="images/clean-logo.png">
     <title>Cleanware</title>
-
+	
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
@@ -248,7 +263,7 @@
 													  
 													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All</span></a></li>
+													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
                                                   </ul>
                                             </div>                                
                                       </li>
@@ -346,6 +361,25 @@
                                               
                                           </div>
                                           <div class="col-md-3 prdct-grid">
+                                              <div class="product-fade">
+											  <div class="e">
+                                                        <a href="prd.html?SAFETYWARE Surface Sanitising Wipes">
+                                                         <center> <img src="images/pr4.png" alt="SAFETYWARE Surface Sanitising Wipes" 
+														  class="img-responsive" style="height:250px;width:220px"></center>
+                                                        </a>
+														<button style="font-size:24px" onclick="p4()" id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														</div>															
+                                              </div>
+                                               
+                                                  <h4>SAFETYWARE Surface Sanitising Wipes</h4>
+                                              
+                                          </div>
+										  
+										                                            <div class="col-md-3 prdct-grid">
                                               <div class="product-fade">
 											  <div class="e">
                                                         <a href="prd.html?SAFETYWARE Surface Sanitising Wipes">

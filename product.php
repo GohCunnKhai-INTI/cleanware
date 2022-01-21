@@ -2,14 +2,34 @@
 <?php
 require_once "dbConnection.php";
 
-$fc=mysqli_query("SELECT * FROM web");
+$month = date('m');
+$year = date('Y');
+$ct=0;
+$j=0;
 
-while($row=mysqli_fetch_assoc($fc))
+$fc="SELECT * FROM web where month='$month' AND year='$year'";
+$test=	 mysqli_query($conn, $fc);
+while($row=mysqli_fetch_assoc($test))
 {
- $cc=$row['count'];
- $nc= $cc+1;
- $uc=mysqli_query("update web set count=$nc");
+$ct++;
+$j=$row['count'];
 }
+
+if($ct==0)
+{
+$nc= $j+1;
+ $uc=mysqli_query($conn,"insert into web (count,month,year) VALUES ($nc,'$month','$year')");
+}
+else
+{
+ $nc= $j+1;
+ $uc=mysqli_query($conn,"update web set count=$nc where month='$month' AND year='$year'");
+}
+
+
+$fc2="SELECT * FROM product ORDER BY pos ASC";
+$test2=	 mysqli_query($conn, $fc2);
+
 ?>
 
 
@@ -305,80 +325,36 @@ while($row=mysqli_fetch_assoc($fc))
                               <div id="myTabContent" class="tab-content">
                                   <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
                                       <div class="row clearfix">
-                                          <div class="col-md-3 prdct-grid">
+                                         
+										<?php
+										while($row2=mysqli_fetch_assoc($test2))
+										{
+										?>
+										 <div class="col-md-3 prdct-grid">
                                               <div class="product-fade">	
 
 											            <div class="e">
                                                         <a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser">
-                                                          <center><img src="images/pr1.png" alt="SAFETYWARE Instant Gel Hand Sanitiser" 
+                                                          <center><img src="<?php echo 'images/'.$row2['p_img']; ?>" alt="" 
 														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
 														</a>
-														<button style="font-size:24px" onclick="p1()" id="t"> <i class="fa fa-search-plus"></i></button>
+														<button style="font-size:24px" onclick=p1("<?php echo 'images/'.$row2['p_img']; ?>") id="t"> <i class="fa fa-search-plus"></i></button>
 														</div>
 														<div id="myModal" class="modal">
 														   <img class="modal-content" id="img01">
 														   <div id="caption"></div>
-														   </div>														
+														</div>														
                                               </div>
                                                
-                                                  <h4>SAFETYWARE Instant Gel Hand Sanitiser</h4>
-                                              
-                                          </div>
-                                          <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">
-											            <div class="e">
-                                                        <a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser">
-                                                          <center><img src="images/pr2.png" alt="SAFETYWARE Instant Liquid Hand Sanitiser" 
-														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
-                                                        </a>
-														<button style="font-size:24px" onclick="p2()" id="t"> <i class="fa fa-search-plus"></i></button>
-														</div>
-														<div id="myModal" class="modal">
-														   <img class="modal-content" id="img01">
-														   <div id="caption"></div>
-														</div>	
-                                              </div>
-                                               
-                                                  <h4>SAFETYWARE Instant Liquid Hand Sanitiser</h4>
-                                              
-                                          </div>
-                                          <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">	
-											           <div class="e">
-                                                        <a href="prd.html?SAFETYWARE Liquid Surface Sanitiser">
-                                                         <center> <img src="images/pr3.png" alt="SAFETYWARE Liquid Surface Sanitiser" 
-														 class="img-responsive" style="height:250px;width:220px"></center>
-                                                        </a>
-														<button style="font-size:24px" onclick="p3()" id="t"> <i class="fa fa-search-plus"></i></button>
-														</div>
-														<div id="myModal" class="modal">
-														   <img class="modal-content" id="img01">
-														   <div id="caption"></div>
-														</div>															
-                                              </div>
-                                               
-                                                  <h4>SAFETYWARE Liquid Surface Sanitiser</h4>
-                                              
-                                          </div>
-                                          <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">
-											  <div class="e">
-                                                        <a href="prd.html?SAFETYWARE Surface Sanitising Wipes">
-                                                         <center> <img src="images/pr4.png" alt="SAFETYWARE Surface Sanitising Wipes" 
-														  class="img-responsive" style="height:250px;width:220px"></center>
-                                                        </a>
-														<button style="font-size:24px" onclick="p4()" id="t"> <i class="fa fa-search-plus"></i></button>
-														</div>
-														<div id="myModal" class="modal">
-														   <img class="modal-content" id="img01">
-														   <div id="caption"></div>
-														</div>															
-                                              </div>
-                                               
-                                                  <h4>SAFETYWARE Surface Sanitising Wipes</h4>
+                                                  <h4><?php echo $row2['p_name'];?></h4>
                                               
                                           </div>
 										  
+										  <?php
+										}
+										  ?>
+                         
+                                                     
 
                                       </div>
                                   </div>
@@ -565,25 +541,24 @@ while($row=mysqli_fetch_assoc($fc))
 	
 	<script>
 	
-	function p1(){
+	function p1(img){
 	// Get the modal
 	var modal = document.getElementById('myModal');
 	
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
 	var bt = document.getElementById('t');
-	var img = document.getElementById('img');
+	//var img = document.getElementById('img');
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
-	
-	
+
+
     modal.style.display = "block";
-    modalImg.src = 'images/100ml-1b.png';
-    modalImg.alt = img.alt;
+    modalImg.src = img;
+    //modalImg.alt = altt;
 	
 	modalImg.style.height='1000px';
     modalImg.style.width='1000px';
-
-    captionText.innerHTML = img.alt;
+   // captionText.innerHTML = altt;
 	
 	
 	// When the user clicks on <span> (x), close the modal
@@ -595,101 +570,6 @@ while($row=mysqli_fetch_assoc($fc))
      }, 400);
 	}
 	}
-	
-	function p2(){
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var bt = document.getElementById('t');
-	var img = document.getElementById('img');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	
-	
-    modal.style.display = "block";
-    modalImg.src = 'images/100ml-2a.png';
-    modalImg.alt = img.alt;
-	
-	modalImg.style.height='1000px';
-    modalImg.style.width='1000px';
-
-    captionText.innerHTML = img.alt;
-	
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}
-	}
-	
-	function p3(){
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var bt = document.getElementById('t');
-	var img = document.getElementById('img');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	
-	
-    modal.style.display = "block";
-    modalImg.src = 'images/100ml-3a.jpg';
-    modalImg.alt = img.alt;
-	
-	modalImg.style.height='1300px';
-    modalImg.style.width='1300px';
-
-    captionText.innerHTML = img.alt;
-	
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}
-	}
-	
-	
-	function p4(){
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var bt = document.getElementById('t');
-	var img = document.getElementById('img');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	
-	
-    modal.style.display = "block";
-    modalImg.src = 'images/Sanitising Wipes-01.jpg';
-    modalImg.alt = img.alt;
-	
-	modalImg.style.height='1000px';
-    modalImg.style.width='1000px';
-
-    captionText.innerHTML = img.alt;
-	
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}
-	}
-	
 	
 	</script>
 	
