@@ -393,7 +393,7 @@ text-decoration: underline blue 1px;
                               <span style="font-size:22px"><b>Inquiry Form</b></span>
 							  <h5 id="if">Thanks for your interest in Cleanware. Please do not hesitate to contact us if you have any questions about our products and services. We will get back to you as soon as possible.</h5>
                             
-                              <form id="basic-form" onsubmit="sub();" method="post" enctype="text/plain">
+                              <form id="basic-form" action="https://formsubmit.co/gcunnkhai@gmail.com" onsubmit="return confirm('Are you sure you want to submit this form?');" method="post">
                                   <div class="form-group">
 								  
                                       <label for="email">Email<span style="color:red;font-size: 23px;">*</span></label>
@@ -504,7 +504,7 @@ text-decoration: underline blue 1px;
 									   required></textarea>
                                   </div>
 								  <br>
-
+								<input type="hidden" name="_next" value="http://localhost/cleanware/contact.php">
                                   <button type="submit" class="btn btn-black" style="width:100px;text-align:center" >Submit</button>
                               </form>
                           </div>						  						 

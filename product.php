@@ -334,7 +334,7 @@ $test2=	 mysqli_query($conn, $fc2);
                                               <div class="product-fade">	
 
 											            <div class="e">
-                                                        <a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser">
+                                                        <a href="prd.php?id=<?php echo $row2['p_id']; ?>">
                                                           <center><img src="<?php echo 'images/'.$row2['p_img']; ?>" alt="" 
 														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
 														</a>
