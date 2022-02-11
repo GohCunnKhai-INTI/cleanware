@@ -1,39 +1,37 @@
 <?php
 require_once "dbConnection.php";
 
+
+
 $id=$_REQUEST['id'];
 
-$fc="SELECT * FROM prlist where p_id=$id ORDER by pos ";
-$test=	 mysqli_query($conn, $fc);
-$count=  mysqli_num_rows($test);
 
-$fcc="SELECT * FROM product where p_id=$id ";
-$testc=	 mysqli_query($conn, $fcc);
+$id2=$id;
 
+	$id2 = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $id2)));
+	
+	
+	if (preg_match('/[\'^£$%&*()}!{@#~?><>,;|=_+¬-]/', $id))
+	{
+		$id2="";
+	}
 
-$fcc2="SELECT * FROM product where p_id=$id ";
-$testc2=	 mysqli_query($conn, $fcc2);
+	if(strpos($id, '<br>') !== false)
+	{
+		$id2='';
+		$id='<b r>';
+	}
+	
 
-$ml="SELECT * FROM product ORDER by pos DESC";
-$mlt=	 mysqli_query($conn, $ml);
-
-$sdesc="";
-$link="";
-$nam="";
-
-
-$des="SELECT * FROM prdesc where p_id=$id ";
-$dess=	 mysqli_query($conn, $des);
-$cdess=  mysqli_num_rows($dess);
-$pp=0;
-
-
-$des2="SELECT * FROM prdesc where p_id=$id ";
-$dess2=	 mysqli_query($conn, $des2);
-
-$des3="SELECT * FROM prdesc where p_id=$id ";
-$dess3=	 mysqli_query($conn, $des3);
+    // Prepare a select statement
+ 
+	$result=mysqli_query($conn,"select * from product where p_name like '%$id2%'"); 
+	$count=  mysqli_num_rows($result);
+	
+	
+	
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,32 +40,15 @@ $dess3=	 mysqli_query($conn, $des3);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	 <link rel="icon" type="image/x-icon" href="images/clean-logo.png">
     <title>Cleanware</title>
-
+	
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
     <link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="src/Nzoom.min.js"></script>
-	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
-
-      
-    <!-- Bootstrap    
-	.bg:hover img{
-  	transform: scale(1.08);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	cursor: crosshair;
-	
-	
-	
-<script>function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><style> html .fb_share_link { padding:2px 0 0 20px; height:16px; background:url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top left; }</style><a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" onclick="return fbs_click()" target="_blank" class="fb_share_link"><img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"></a>
-
-
-    }-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- main css -->
@@ -83,9 +64,11 @@ $dess3=	 mysqli_query($conn, $des3);
     <link href="css/prettyPhoto.css" rel="stylesheet">
 
   </head>
-  
- <style>
 
+  <style>
+  .ln2{
+    height:25px;
+  }
   .m{
   margin-left:-15px;
   margin-top:20px;
@@ -109,116 +92,38 @@ $dess3=	 mysqli_query($conn, $des3);
 	  padding:12px;
 
   }
-  .wrap{
-     width: 1050px;
-	 height: 410px;
-	 
-    overflow: hidden;
-  }
-  .ibg{
-    margin-left:50px;
-	margin-top:6px;
-	float:left;
-
-  }
-  .ibg2{ 
-      margin-left:-120px;
-	  margin-top:6px;
-	   overflow: hidden;
-	   font-size:28px;
-  }
-  
-
-  .dsh{
-   border: 0.5px solid #DCDCDC;
-   width:55px;
-   margin-left:32px;
-   margin-top:-20px;
-
-  }
-  #name{
-  margin-left:30px;
-  margin-top:0px;
-  text-align: justify;
-  color:black;
-  font-weight:bold;
-  }
-  #name2{
-  margin-left:35px;
-  margin-top:-20px;
-  text-align: justify;
-  font-size:15px;
-  }
-  #name22{
-  margin-left:35px;
-  margin-top:15px;
-  text-align: justify;
-  }
-  .dsh2{
-   margin-left:32px;
-   margin-top:-25px;
-   margin-bottom:12px;
-   border: 0.5px solid #DCDCDC;
-   width:540px;
-  }
-  #name3{
-   margin-top:20px;
-   margin-left:35px;
-   text-align: justify;
-  }
-  #name4{
-   margin-top:20px;
-   margin-left:35px;
-   text-align: justify;
-  }
-  #name5{
-   margin-top:20px;
-   margin-left:35px;
-   text-align: justify;
-  }
-  #web{
-	margin-top:35px;
-   margin-left:-385px;
-   text-align: justify;
-  }
-  .dsh3{
-   margin-left:32px;
-   margin-top:20px;
-   border: 0.5px solid #DCDCDC;
-   width:540px;
-  }
-  .desc{
-   float:left;
-   margin-top:-25px;
-  }
-  table{
-    border-collapse: collapse;
-    border-spacing: 0;
-	width:1100px;
-  }
-  th, td{
-    padding: 10px 20px;
-    border: 1px solid #000;
-	text-align: left;
-  }
   .megamenu{
-  width:220px;
+    width:220px;
   height:220px;
   }
-    .bb:hover{
-text-decoration: underline blue 1px;
+  .bb:hover{
+  text-decoration: underline blue 1px;
   }
   
-    #NZoomImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-	}
-	
-	/* The Modal (background) */
+  .blink_me {
+  animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+  50% { opacity: 0.65; }
+  }
+  
+  .e #t{
+ position: absolute;
+  top: 12px;
+  margin-left:75px;
+ background-color: transparent;
+  
+  border:none;
+  color:#C0C0C0;
+  }
+  
+  .e #t:hover{
+    color: black;
+
+  }
+  
+  /* The Modal (background) */
 	.modal {
 	display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -298,106 +203,15 @@ text-decoration: underline blue 1px;
 	 margin-top:-20px;
 	 margin-left:80px;
 	}
-	
-  .blink_me {
-  animation: blinker 1s linear infinite;
-  }
-  
-  @keyframes blinker {  
-  50% { opacity: 0.65; }
-  }
-  
-  #gall{
-  height:375px;
-  overflow: auto;
-  float:left;
-  margin-left:35px;
 
-  
-  }
-  ::-webkit-scrollbar {
-    width: 0.1px;
-
-}
-  
-  /* Shrink wrap strategy 1 */
-
-.easyzoom {
-    float: left;
-}
-.easyzoom img {
-    display: block;
-}
-
-.easyzoom {
-float: left;
-}
-.easyzoomimg {
-display: block;
-}
-.easyzoom {
-display: inline-block;
-}
-.easyzoomimg {
-vertical-align: bottom;
-}
-
-.zoomArea {
-
-  overflow:hidden;
-
-  border:1px solid
-  text-align: center;
-  color: #000000;
-
-}
-
-#topl {
-  position: absolute;
-  top: 8px;
-  margin-left:20px;
-text-align: justify;
-}
-
-#topr{
-  position: absolute;
-  top: 6px;
-  margin-left:145px;
- background-color: transparent;
-  
-  border:none;
-  color:#C0C0C0;
-}
-
-#topr:hover{
- color:black;
-}
- 
-
-.zoomArea > image {
-
-  width:100%;
-
-  height:100%;
-
-}
-
-.page{
-border: 0.5px solid #DCDCDC;
-cursor: pointer;
-}
-.solid {border-bottom: 1px solid gray;
-width:1150px;
-}
 
   </style>
   
+  <body>
 
-<body>
-
-<div id="wrapper" class="homepage-1"> <!-- wrapper -->
+      <div id="wrapper" class="homepage-1"> <!-- wrapper -->
           <div id="header"> <!-- header -->
-               <div class="top"> <!-- top -->
+              <div class="top"> <!-- top -->
                   <div class="container">
                       <ul class="top-support"> 
                           <li><span>HYGIENE & SANITISATION</span></li>                    
@@ -409,7 +223,7 @@ width:1150px;
                   </div>
               </div> <!-- top -->
               
-             <div id="believe-nav"> <!-- Nav -->
+              <div id="believe-nav"> <!-- Nav -->
                   <div class="container">
                       <div class="min-marg">
                           <nav class="navbar navbar-default">
@@ -424,7 +238,7 @@ width:1150px;
                                       </button>
                                       <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
-
+								  
                               <!--</div> -->                          
                           </nav>
                       </div>
@@ -450,7 +264,7 @@ width:1150px;
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                               <li><a href="index.php">Home</a></li>
+                              <li><a href="index.php">Home</a></li>
 							  <li class="active"><a href="product.php">Product</a></li>
                               <li><a href="contact.php">Contact Us</a></li>
 							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
@@ -460,328 +274,75 @@ width:1150px;
                       <!--</div> -->
                   </nav>
               </div>
-              </div>   
+              </div>      
           </div> <!-- header -->
           
 
           
-          <div id="content"> <!-- Content -->
-       
+			<div id="content"> <!-- Content -->
+              <div class="prd">
+                  <div class="container">
+                      <div class="prd2">
+                          <h3><?php echo $count; ?> results for "<?php echo $id;?>"</h3>
+                          <div class="breadcumb"> <a href="product.php">Product</a><span> / </span><span>Search</span></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
+              </div>
+              
               <div class="newest">
                   <div class="container">
                       <div class="newest-content">
-                          <div class="newest-tab">                            
-                              
-                              <div id="myTabContent" class="tab-content">
-                                  <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
-                                      <div class="row clearfix">
-                                          <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">	
-
-											  
-                                                        <div class="wrap">
-														
-														<div id="gall">													
-														<?php
-														if($count<1)
-														{
-														while($row2=mysqli_fetch_assoc($testc))
-														{
-														?>
-														<div class="page"><img src="<?php echo 'images/'.$row2['p_img'];?>" id="pop" name="<?php echo $row2['p_id'];?>"
-														alt="<?php echo $row2['p_name'];?>" onclick="abc(this.src,this.alt)" style="width:60px;height:60px;"></div> 
-														<?php
-														}															
-														}
-														else
-														{ 
-														while($row=mysqli_fetch_assoc($test))
-														{											
-														?>
-														<div class="page"><img src="<?php echo 'images/'.$row['pr_img'];?>" id="pop" name="<?php echo $row['prlist_id'];?>"
-														alt="<?php echo $row['pr_sdesc'];?>" onclick="abc(this.src,this.alt)" style="width:60px;height:60px;"></div> 
-														<?php
-											
-														}
-														}
-														?>
-													
-														</div>
-														
-												
-		
-														<div class="ibg">
-														<div class="zoomArea">																			
-                                                          <div class="bg">
-														  <img id="NZoomImg" alt="" data-NZoomscale="3" height="350px" width="350px">
-														  </div>
-														    <b><div id="topl"></div></b>
-														
-															<button style="font-size:24px" id="topr"> <i class="fas fa-compress"></i></button>
-														  
-														</div>
-														  
-														<div id="myModal" class="modal">
-														   <img class="modal-content" id="img01">
-														   <div id="caption"></div>
-														</div>													
-														</div>	
-														
-														
-														
-														<script>
-														
-														$(".page").click(function() {
-															$('#gall').append($(this));
-														});
-																												
-															function abc(imgg,altt){
-															document.getElementById('NZoomImg').src = imgg;																												
-															document.getElementById("topl").innerHTML = altt;
-															
-															// Get the modal
-															var modal = document.getElementById('myModal');
-															
-															// Get the image and insert it inside the modal - use its "alt" text as a caption
-															var img = document.getElementById('topr');
-															var modalImg = document.getElementById("img01");
-															var captionText = document.getElementById("caption");
-															
-															img.onclick = function(){
-															modal.style.display = "block";
-															modalImg.src = imgg;
-															modalImg.alt = altt;
-															captionText.innerHTML = altt;
-															}
-															
-															// When the user clicks on <span> (x), close the modal
-															modal.onclick = function() {
-															img01.className += " out";
-															setTimeout(function() {
-															   modal.style.display = "none";
-															   img01.className = "modal-content";
-															 }, 400);
-															}    															
-															}
-															
-															
-															//document.getElementById("page").style.borderColor = "#DCDCDC";		
-																
-																// Get the modal
-																var modal = document.getElementById('myModal');
-																var imgg=document.getElementById("pop").src;
-																var altt=document.getElementById("pop").alt;
-																// Get the image and insert it inside the modal - use its "alt" text as a caption
-																var img = document.getElementById('topr');
-																var modalImg = document.getElementById("img01");
-																var captionText = document.getElementById("caption");
-																
-																document.getElementById("topl").innerHTML = altt;
-																document.getElementById('NZoomImg').src = imgg;
-															
-																img.onclick = function(){
-																modal.style.display = "block";
-																modalImg.src = imgg;
-																modalImg.alt = altt;															
-
-																captionText.innerHTML = altt;
-																}
-																
-																// When the user clicks on <span> (x), close the modal
-																modal.onclick = function() {
-																img01.className += " out";
-																setTimeout(function() {
-																   modal.style.display = "none";
-																   img01.className = "modal-content";
-																 }, 400);
-																}    
-
-														</script>
-														
-														<div class="ibg2">
-														
-														<?php
-														while($row3=mysqli_fetch_assoc($testc2))
-														{
-															$sdesc=$row3['p_sdesc'];
-															$link=$row3['p_link'];
-															$nam=$row3['p_name'];
-														?>
-														
-														<b><h3 id="name"><?php echo $row3['p_name'];?></h3></b>
-														<br>
-														<?php
-														}	
-														?>
-														<div class="dsh"></div>
-														<br>
-														<p id="name2"><?php echo nl2br($sdesc);?></p>	
-														<br>
-														<div class="dsh2"></div>													
-													   
-														<a id="web" type="button" href=<?php echo $link;?> value="facebook" 
-														target="_blank" style="border: 1.5px solid #DCDCDC;width:200px;background-color:black;padding:5px;font-size:18px;"><span 
-														style="text-align:center">Buy It Now</span></a>
-													
-													    <div class="dsh3"></div>
-														
-														<h5 id="name5">Share on: 
-														&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-														
-														<div class="root">
-														<script async defer crossorigin="anonymous"  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="z5U9zpQr"></script>
-														
-														<div class="fb-share-button"  data-href="" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" 
-													    >Share</a></div>
-										
-														</div>
-														</h5>
-                                                        </div>	
-
-																								
-												
-														
-                                                     </div>	
-													 
-													 <script src="script.js"></script>  
-													 
-                           
-                   </div>  
-				<br>
-						<div class="solid"></div>				
-                <br><br>
-		
-				<div class="brands">
-                  <div class="container">
-         
-                          <div class="brand-title">
-                            <h4 class="desc"><u> Product Description</u></h4>
-                          </div>
-						  
-						  <?php
-						  while($row5=mysqli_fetch_assoc($dess))
-						  {
-							  $pp=$row5['pr_format'];
-						  }
-							  
-							if($pp==1)
-							{
-							while($row7=mysqli_fetch_assoc($dess2))
-							{	
-						  ?>
-						  	
-							<p style="text-align: justify;"><?php echo nl2br($row7['pr_ldesc']);?> </p>
-						 
-						  <?php
-							}
-							}
-							else if($pp==2)
-							{
-							?>
-							 <table id="body">
-					           <tr>
-								<th>Item Code</th>
-								<th>Description</th>
-								<th>Type</th>
-								<th>Packing</th>
-								<th>Unit</th>							
-							  </tr>
-							  
-							  
-							  
-								<?php
-								while($row8=mysqli_fetch_assoc($dess3))
-								{
-								?>
-								<tr>								
-								<td><?php echo $row8['pr_code'];?></td>
-								<td><?php echo $row8['pr_cdesc'];?></td>
-								<td><?php echo $row8['pr_type'];?></td>
-								<td><?php echo $row8['pr_pack'];?></td>
-								<td><?php echo $row8['pr_unit'];?></td>							
-								</tr>
-								<?php
-								}
-								?>
-							 </table>
-							<?php
-							}
-						   
-						  ?>
-				
-            
-		
-                  </div>
-              </div>
-	<br><br>
-	<div class="solid"></div>
-	
-	<div class="ln2"></div>
-	<br>
-	
-            <div class="newest">
-                  <div class="container">
-              
                           <div class="newest-tab">
-                             <div class="brand-title">
-                            <h4 class="desc"><u>You may also like</u></h4>
-                          </div>
-                              <br>
-                              
+                           <div class="brand-title">
+                              <span>Showing All <?php echo $count?> Results</span>
+                          </div>     
                               <div id="myTabContent" class="tab-content">
                                   <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
                                       <div class="row clearfix">
                                          
 										<?php
-										$count=1;
-										while($row5=mysqli_fetch_assoc($mlt))
-										{
-										
-										if($row5['p_name']!=$nam)
-										{
-										if($count<5)
-										{
+											if($count!=0)
+											{
+												
+											while($row2=mysqli_fetch_assoc($result))
+											{
+													
 										?>
-										
 										 <div class="col-md-3 prdct-grid">
                                               <div class="product-fade">	
-															<a href="prd.php?id=<?php echo $row5['p_id']; ?>">
-                                                          <center><img src="<?php echo 'images/'.$row5['p_img']; ?>" alt="" 
-														  class="img-responsive" id="img" style="height:250px;width:220px"></center>									
-															</a>
-																										
-                                              </div>       
-                                                  <h4><?php echo $row5['p_name'];?></h4>
+
+											            <div class="e">
+                                                        <a href="prd.php?id=<?php echo $row2['p_id']; ?>">
+                                                          <center><img src="<?php echo 'images/'.$row2['p_img']; ?>" alt="" 
+														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
+														</a>
+														<button style="font-size:24px" onclick=p1("<?php echo 'images/'.$row2['p_img']; ?>") id="t"> <i class="fa fa-search-plus"></i></button>
+														</div>
+														<div id="myModal" class="modal">
+														   <img class="modal-content" id="img01">
+														   <div id="caption"></div>
+														</div>														
+                                              </div>
+                                               
+                                                  <h4><?php echo $row2['p_name'];?></h4>
                                               
                                           </div>
 										  
 										  <?php
-										}
-											$count++;
-										}
-									
-										}
+								  	
+											  }
+											}
+											else 
+											{
+													 echo  "No results..." ;	
+											}
+										
 										  ?>
                          
                                                      
 
                                       </div>
-                                  </div>
-                                  
-                              </div>
-                              
-                          </div>
-                      
-                  </div>
-              </div>
-                                              
-									  
-                                              
-                                          </div>                                        
-
-                                      </div>
-
-									  
                                   </div>
                                   
                                   <div role="tabpanel" class="tab-pane fade" id="2" aria-labelledby="cat-2">
@@ -809,8 +370,7 @@ width:1150px;
                         
               
           </div> <!-- Content -->
-            </body>
-
+          
           <div id="footer"><!-- Footer -->
               <div class="footer-widget">
                   <div class="container">
@@ -964,17 +524,40 @@ width:1150px;
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
-
-	
-
-
 	
 	<script>
-    //var queryString = location.search.substring(1);
-
-
-
-    </script>
 	
+	function p1(img){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var bt = document.getElementById('t');
+	//var img = document.getElementById('img');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
 
+
+    modal.style.display = "block";
+    modalImg.src = img;
+    //modalImg.alt = altt;
+	
+	modalImg.style.height='1000px';
+    modalImg.style.width='1000px';
+   // captionText.innerHTML = altt;
+	
+	
+	// When the user clicks on <span> (x), close the modal
+	modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+	}
+	}
+	
+	</script>
+	
+  </body>
 </html>

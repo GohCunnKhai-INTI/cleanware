@@ -164,7 +164,7 @@ text-decoration: underline blue 1px;
                           <li><span>HYGIENE & SANITISATION</span></li>                    
                       </ul>
                       <div class="top-control">
-                          <a href="faq.html">FAQs</a>
+                          <a href="faq.php">FAQs</a>
                       </div>					
 
                   </div>
@@ -183,7 +183,7 @@ text-decoration: underline blue 1px;
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
 
                               <!--</div> -->                          
@@ -211,32 +211,9 @@ text-decoration: underline blue 1px;
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                              <li><a href="index.html">Home</a></li>
-                              <li class="dropdown menu-large">
-                                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product <i class="fa fa-angle-down"></i></a>
-                                  <ul class="dropdown-menu megamenu" role="menu">
-                                      <li width="20px">
-                                          
-                                              <div class="mega-sub" style="margin-top:8px;">
-											
-                                                  <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
-													 
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
-													
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
-												
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
-													  
-													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
-                                                  </ul>
-                                            </div>                                
-                                      </li>
-                                  </ul>
-                              </li>
-                              <li class="active"><a href="contact.html">Contact Us</a></li>
+                              <li><a href="index.php">Home</a></li>
+							  <li><a href="product.php">Product</a></li>
+                              <li class="active"><a href="contact.php">Contact Us</a></li>
 							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
                           </ul>
                            
@@ -252,7 +229,7 @@ text-decoration: underline blue 1px;
                   <div class="container">
                       <div class="prd2">
                           <h3>Contact us</h3>
-                          <div class="breadcumb"> <a href="index.html">Home</a><span> / </span><span>Contact us</span></div>
+                          <div class="breadcumb"> <a href="index.php">Home</a><span> / </span><span>Contact us</span></div>
                           <div class="clearfix"></div>
                       </div>
                   </div>
@@ -740,7 +717,7 @@ text-decoration: underline blue 1px;
                       <div class="row">
                           <div class="col-md-3">
                               <div class="text-widget">                               
-                                  <a href="index.html"> <img src="images/clean-logo.png" alt="ft-logo" height="50px" width="220px"></a>
+                                  <a href="index.php"> <img src="images/clean-logo.png" alt="ft-logo" height="50px" width="220px"></a>
 								  <br/>
 								  
                                   
@@ -871,7 +848,7 @@ text-decoration: underline blue 1px;
               </div>
               <div class="footer-text">
                   <div class="container">
-                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2022 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
                   </div>
               </div>
           </div><!-- Footer -->

@@ -10,10 +10,11 @@ $count=  mysqli_num_rows($test);
 $fcc="SELECT * FROM product where p_id=$id ";
 $testc=	 mysqli_query($conn, $fcc);
 
+
 $fcc2="SELECT * FROM product where p_id=$id ";
 $testc2=	 mysqli_query($conn, $fcc2);
 
-$ml="SELECT * FROM product ORDER by pos ASC";
+$ml="SELECT * FROM product ORDER by pos DESC";
 $mlt=	 mysqli_query($conn, $ml);
 
 $sdesc="";
@@ -402,7 +403,7 @@ width:1150px;
                           <li><span>HYGIENE & SANITISATION</span></li>                    
                       </ul>
                       <div class="top-control">
-                          <a href="faq.html">FAQs</a>
+                          <a href="faq.php">FAQs</a>
                       </div>					
 
                   </div>
@@ -421,7 +422,7 @@ width:1150px;
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
 
                               <!--</div> -->                          
@@ -449,32 +450,9 @@ width:1150px;
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                              <li><a href="index.html">Home</a></li>
-                              <li class="dropdown menu-large">
-                                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product <i class="fa fa-angle-down"></i></a>
-                                  <ul class="dropdown-menu megamenu" role="menu">
-                                      <li width="20px">
-                                          
-                                              <div class="mega-sub" style="margin-top:8px;">
-											
-                                                  <ul>
-                                                      <li><a href="prd.html?SAFETYWARE Instant Gel Hand Sanitiser"><span class="bb"style="color:gray">SAFETYWARE Instant Gel Hand Sanitiser</span></a></li>
-													 
-                                                      <li><a href="prd.html?SAFETYWARE Instant Liquid Hand Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Instant Liquid Hand Sanitiser</span></a></li>					 
-													
-                                                      <li><a href="prd.html?SAFETYWARE Liquid Surface Sanitiser"><span class="bb" style="color:gray">SAFETYWARE Liquid Surface Sanitiser</span></a></li>
-												
-													  <li><a href="prd.html?SAFETYWARE Surface Sanitising Wipes"><span class="bb" style="color:gray;">SAFETYWARE Surface Sanitising Wipes</span></a></li>
-													  
-													  <li><a href="product.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-													  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="bb"> View All ></span></a></li>
-                                                  </ul>
-                                            </div>                                
-                                      </li>
-                                  </ul>
-                              </li>
-                              <li><a href="contact.html">Contact Us</a></li>
+                               <li><a href="index.php">Home</a></li>
+							  <li class="active"><a href="product.php">Product</a></li>
+                              <li><a href="contact.php">Contact Us</a></li>
 							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
                           </ul>
                            
@@ -525,7 +503,6 @@ width:1150px;
 														<?php
 											
 														}
-														
 														}
 														?>
 													
@@ -693,7 +670,7 @@ width:1150px;
 							{	
 						  ?>
 						  	
-							<p style="float:left;"><?php echo nl2br($row7['pr_ldesc']);?> </p>
+							<p style="text-align: justify;"><?php echo nl2br($row7['pr_ldesc']);?> </p>
 						 
 						  <?php
 							}
@@ -709,13 +686,23 @@ width:1150px;
 								<th>Packing</th>
 								<th>Unit</th>							
 							  </tr>
-							  	<tr>
-								<td>Item Code</td>
-								<td>Description</td>
-								<td>Type</td>
-								<td>Packing</td>
-								<td>Unit</td>							
-							  </tr>
+							  
+							  
+							  
+								<?php
+								while($row8=mysqli_fetch_assoc($dess3))
+								{
+								?>
+								<tr>								
+								<td><?php echo $row8['pr_code'];?></td>
+								<td><?php echo $row8['pr_cdesc'];?></td>
+								<td><?php echo $row8['pr_type'];?></td>
+								<td><?php echo $row8['pr_pack'];?></td>
+								<td><?php echo $row8['pr_unit'];?></td>							
+								</tr>
+								<?php
+								}
+								?>
 							 </table>
 							<?php
 							}
@@ -730,52 +717,61 @@ width:1150px;
 	<div class="solid"></div>
 	
 	<div class="ln2"></div>
-              <div class="rec-blog">
-                  <div class="container">
-                      <div class="rec-blog-inner">
-                          <div class="blog-title">
-                              <h4 class="desc"><u> You may also like</u></h4>
-                          </div>
-                          <div class="row">
-                              
-							  <?php
-							  $count=1;
-							  while($row4=mysqli_fetch_assoc($mlt))
-							  {
-								  
-								if($row4['p_name']!=$nam)
-								{							
-								
-								if($count>2)
-								{	
-							 ?>
-							 <div class="col-md-4 blog-ct">
-                                  <center><img src=<?php echo 'images/'.$row4['p_img'];?> alt="" id=<?php echo $row4['p_id'];?>
-								  class="img-responsive" width="220px" height="250px" onclick="next(this.id)"
-								  style="cursor:pointer"></center>
-                                  <div class="blog-ct-title">
-                                      <h4 id="mlike"><?php echo $row4['p_name'];?></h4>                                    
-                                  </div>
-                              </div>  
-														  
-							<?php
-								}
-								$count++;
-								}
-							  }
-							  ?>
+	<br>
 	
-							<script>
-								function next(idd){
-								window.location.href = "prd.php?id="+idd;
-								}
-							</script>
-		
-							  
-							  
+            <div class="newest">
+                  <div class="container">
+              
+                          <div class="newest-tab">
+                             <div class="brand-title">
+                            <h4 class="desc"><u>You may also like</u></h4>
                           </div>
+                              <br>
+                              
+                              <div id="myTabContent" class="tab-content">
+                                  <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
+                                      <div class="row clearfix">
+                                         
+										<?php
+										$count=1;
+										while($row5=mysqli_fetch_assoc($mlt))
+										{
+										
+										if($row5['p_name']!=$nam)
+										{
+										if($count<5)
+										{
+										?>
+										
+										 <div class="col-md-3 prdct-grid">
+                                              <div class="product-fade">	
+															<a href="prd.php?id=<?php echo $row5['p_id']; ?>">
+                                                          <center><img src="<?php echo 'images/'.$row5['p_img']; ?>" alt="" 
+														  class="img-responsive" id="img" style="height:250px;width:220px"></center>									
+															</a>
+																										
+                                              </div>       
+                                                  <h4><?php echo $row5['p_name'];?></h4>
+                                              
+                                          </div>
+										  
+										  <?php
+										}
+											$count++;
+										}
+									
+										}
+										  ?>
+                         
+                                                     
 
-                      </div>
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                              
+                          </div>
+                      
                   </div>
               </div>
                                               
@@ -821,7 +817,7 @@ width:1150px;
                       <div class="row">
                           <div class="col-md-3">
                               <div class="text-widget">                               
-                                  <a href="index.html"> <img src="images/clean-logo.png" alt="ft-logo" height="50px" width="220px"></a>
+                                  <a href="index.php"> <img src="images/clean-logo.png" alt="ft-logo" height="50px" width="220px"></a>
 								  <br/>
 								  
                                   
@@ -952,7 +948,7 @@ width:1150px;
               </div>
               <div class="footer-text">
                   <div class="container">
-                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2021 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
+                     <a href="https://safetyware.com/privacy-policy/" style="color: #ffffff !important" target="_blank">Privacy Policy</a><b style="float: right;color: #E8E8E8;">Copyright © 2022 Safetyware Sdn Bhd. All Rights Reserved.  | Powered by <a href="https://keyway.com.my/" target="_blank" style="color: #777777!important">Keyway Technologies</a></b>
                   </div>
               </div>
           </div><!-- Footer -->

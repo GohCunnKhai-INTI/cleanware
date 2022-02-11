@@ -1,53 +1,17 @@
-
-<?php
-require_once "dbConnection.php";
-
-$month = date('m');
-$year = date('Y');
-$ct=0;
-$j=0;
-
-$fc="SELECT * FROM web where month='$month' AND year='$year'";
-$test=	 mysqli_query($conn, $fc);
-while($row=mysqli_fetch_assoc($test))
-{
-$ct++;
-$j=$row['count'];
-}
-
-if($ct==0)
-{
-$nc= $j+1;
- $uc=mysqli_query($conn,"insert into web (count,month,year) VALUES ($nc,'$month','$year')");
-}
-else
-{
- $nc= $j+1;
- $uc=mysqli_query($conn,"update web set count=$nc where month='$month' AND year='$year'");
-}
-
-
-$fc2="SELECT * FROM product ORDER BY pos ASC";
-$test2=	 mysqli_query($conn, $fc2);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="icon" type="image/x-icon" href="images/clean-logo.png">
     <title>Cleanware</title>
-	
+
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
     <link href='font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
@@ -58,13 +22,18 @@ $test2=	 mysqli_query($conn, $fc2);
     <!-- Slider -->
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet"> 
+    <link href="css/owl.transitions.css" rel="stylesheet">
       
     <!-- lightbox -->
     <link href="css/prettyPhoto.css" rel="stylesheet">
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-
   <style>
   .ln2{
     height:25px;
@@ -85,19 +54,27 @@ $test2=	 mysqli_query($conn, $fc2);
   margin-top:70px;
   width:1550px;
   }
-  .prd{
+  .megamenu{
+  border: 1px solid #000;
+  }
+
+  </style>
+
+  <style>
+  .faq{
 	  background-color:#DCDCDC;
   }
-  .prd2{
+  .faq2{
 	  padding:12px;
 
   }
-  .megamenu{
-    width:220px;
-  height:220px;
+  .faq3{
+	  margin-top:40px;
+
   }
-  .bb:hover{
-  text-decoration: underline blue 1px;
+  .faq4{
+	  font-size:20px;
+
   }
   
   .blink_me {
@@ -107,106 +84,7 @@ $test2=	 mysqli_query($conn, $fc2);
   @keyframes blinker {  
   50% { opacity: 0.65; }
   }
-  
-  .e #t{
- position: absolute;
-  top: 12px;
-  margin-left:75px;
- background-color: transparent;
-  
-  border:none;
-  color:#C0C0C0;
-  }
-  
-  .e #t:hover{
-    color: black;
-
-  }
-  
-  /* The Modal (background) */
-	.modal {
-	display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 99; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-	}
-	
-	/* Modal Content (image) */
-	.modal-content {
-    margin: auto;
-    display: block;
-    width: 75%;
-    //max-width: 75%;
-	}
-	/* Caption of Modal Image */
-	#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-	}
-	@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(1)}
-    to {-webkit-transform:scale(2)}
-	}
-	
-	@keyframes zoom {
-    from {transform:scale(0.4)}
-    to {transform:scale(1)}
-	}
-	
-	@-webkit-keyframes zoom-out {
-    from {transform:scale(1)}
-    to {transform:scale(0)}
-	}
-	
-	@keyframes zoom-out {
-    from {transform:scale(1)}
-    to {transform:scale(0)}
-	
-	}
-	
-	/* Add Animation */
-	.modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-	}
-	
-	.out {
-	animation-name: zoom-out;
-	animation-duration: 0.6s;
-	}
-	
-	/* 100% Image Width on Smaller Screens */
-	@media only screen and (max-width: 700px){
-	.modal-content {
-        width: 100%;
-    }
-	}
-	
-	.root{
-	 width:50%;
-	 height:18px;
-	 margin-top:-20px;
-	 margin-left:80px;
-	}
-
-
   </style>
-  
   <body>
 
       <div id="wrapper" class="homepage-1"> <!-- wrapper -->
@@ -214,16 +92,16 @@ $test2=	 mysqli_query($conn, $fc2);
               <div class="top"> <!-- top -->
                   <div class="container">
                       <ul class="top-support"> 
-                          <li><span>HYGIENE & SANITISATION</span></li>                    
+                           <li><span>HYGIENE & SANITIZATION</span></li>  
                       </ul>
                       <div class="top-control">
-                          <a href="faq.php">FAQs</a>
-                      </div>					
-
+                         <a href="">FAQs</a>
+                      </div>
+                      <div class="clearfix"></div>
                   </div>
               </div> <!-- top -->
               
-              <div id="believe-nav"> <!-- Nav -->
+               <div id="believe-nav"> <!-- Nav -->
                   <div class="container">
                       <div class="min-marg">
                           <nav class="navbar navbar-default">
@@ -236,16 +114,15 @@ $test2=	 mysqli_query($conn, $fc2);
                                           <span class="icon-bar"></span>
                                           <span class="icon-bar"></span>
                                       </button>
-                                      <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo" height="40px" width="190px"></a>
+                                      <a class="navbar-brand" href="index.php"><img src="images/clean-logo.png" alt="logo" height="40px" width="190px"></a>
                                   </div>
-								  
                               <!--</div> -->                          
                           </nav>
                       </div>
+
+
                   </div>
               </div> <!-- Nav -->
-
-              
               
               <div id="cat-nav">
               <div class="container">
@@ -264,103 +141,82 @@ $test2=	 mysqli_query($conn, $fc2);
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="cat-nav-mega">
                           <ul class="nav navbar-nav">
-                               <li><a href="index.php">Home</a></li>
-							  <li class="active"><a href="product.php">Product</a></li>
+                              <li><a href="index.php">Home</a></li>
+							  <li><a href="product.php">Product</a></li>
                               <li><a href="contact.php">Contact Us</a></li>
-							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>            
+							  <span class="blink_me"><li><a href="https://shop.safetyware.com.my/?_ga=2.149303670.1736396890.1641192003-1137409983.1641192003" target="_blank"><span style="color:red">SAFETYWARE Online Store</span></a></li></span>
+             
+                          
                           </ul>
                            
                       </div><!-- /.navbar-collapse -->
                       <!--</div> -->
                   </nav>
               </div>
-              </div>      
+              </div>     
+              
           </div> <!-- header -->
           
-
-          
-			<div id="content"> <!-- Content -->
-              <div class="prd">
+          <div id="content"> <!-- Content -->
+              <div class="faq">
                   <div class="container">
-                      <div class="prd2">
-                          <h3>Products</h3>
-                          <div class="breadcumb"> <a href="index.php">Home</a><span> / </span><span>Product</span></div>
+                      <div class="faq2">
+                          <h3>Frequently Asked Questions (FAQ)</h3>
+                          <div class="breadcumb"> <a href="index.php">Home</a><span> / </span><span>FAQ</span></div>
                           <div class="clearfix"></div>
                       </div>
                   </div>
               </div>
-              
-              <div class="newest">
-                  <div class="container">
-                      <div class="newest-content">
-                          <div class="newest-tab">
-                           <div class="brand-title">
-                              <span>Our Products</span>
-                          </div>     
-                              <div id="myTabContent" class="tab-content">
-                                  <div role="tabpanel" class="tab-pane fade in active" id="1" aria-labelledby="cat-1">
-                                      <div class="row clearfix">
-                                         
-										<?php
-										while($row2=mysqli_fetch_assoc($test2))
-										{
-										?>
-										 <div class="col-md-3 prdct-grid">
-                                              <div class="product-fade">	
-
-											            <div class="e">
-                                                        <a href="prd.php?id=<?php echo $row2['p_id']; ?>">
-                                                          <center><img src="<?php echo 'images/'.$row2['p_img']; ?>" alt="" 
-														  class="img-responsive" id="img" style="height:250px;width:220px"></center>
-														</a>
-														<button style="font-size:24px" onclick=p1("<?php echo 'images/'.$row2['p_img']; ?>") id="t"> <i class="fa fa-search-plus"></i></button>
-														</div>
-														<div id="myModal" class="modal">
-														   <img class="modal-content" id="img01">
-														   <div id="caption"></div>
-														</div>														
-                                              </div>
-                                               
-                                                  <h4><?php echo $row2['p_name'];?></h4>
-                                              
-                                          </div>
-										  
-										  <?php
-										}
-										  ?>
-                         
-                                                     
-
+              <div class="container">
+                  <div class="faq3">
+                                  <div class="col-md-12 blog-block">
+                                      <div class="inner">
+                                          <h4 class="faq4">1. Do all types of sanitizing products contains alcohol?</h4>
+                               
+                                          <p>
+                                         There are some sanitizing products that are alcohol free to cater to those that do not prefer alcohol usage. However, according to the Centers for Disease Control and Prevention (CDC), it is recommended to use sanitizing products that are of at least 60% alcohol for a more effective cleaning and disinfecting purposes - alcohol eliminates harmful germs better and faster.                                          
+										 </p>
+										 
+										 <br>
+										<h4 class="faq4">2. When should I apply the sanitizing products?</h4>
+                               
+                                          <p>
+                                          Sanitizing products can be used at any time when needed. Mainly used when there are risk of contaminations - eg: before and after making contact with any surfaces or person that may be contaminated / sick, such as in grocery store, petrol station, touching door knobs, lift buttons, etc. 
+										 </p>
+										 
+										 										 <br>
+										<h4 class="faq4">3. Is instant sanitizing products the best option to eliminates the harmful infections like virus, bacteria or germs? </h4>
+                               
+                                          <p>
+                                          Sanitizing products stand as an option for instant cleaning and sanitizing if no soap and water is available. Usual alcohol-based sanitizing products like hand sanitizer and surface sanitizers eliminates the harmful infections immediately. To increase the effectiveness, it is encouraged that one follows the practice of wearing a mask when sick and wash hands with water and soap when available and avoid touching any public items if unnecessary to prevent the spread of infections as advised by the Centers for Disease Control and Prevention (CDC). 
+										 </p>
+										 
+										 	 										 <br>
+										<h4 class="faq4">4. Does expired sanitizing products still effective for use? </h4>
+                               
+                                          <p>
+                                          Most sanitizing products have shelf life of normal of 2 – 3 years duration for them to work at its highest performance. After expiration date, it tends to become less potent and less effective in eliminating germs as compared to a fresh batch. However, it is completely safe to use even after its expiry date.
+										 </p>
+										 
+										<br>
+										<h4 class="faq4">5. Where should the sanitizing products be stored?</h4>
+                               
+                                          <p>
+                                          Sanitizing products are encouraged to be kept in a cool and dry places. It should not be placed under direct sunlight. It must be stored out of reach and sight of children to prevent accidental consumption.
+										 </p>
+										 
+										 
+                                          
                                       </div>
-                                  </div>
-                                  
-                                  <div role="tabpanel" class="tab-pane fade" id="2" aria-labelledby="cat-2">
-                                      <div class="row">
-                                          <div class="col-md-12">
-                                              <p>....</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  
-                                  <div role="tabpanel" class="tab-pane fade" id="3" aria-labelledby="cat-3">
-                                      <div class="row">
-                                          <div class="col-md-12">
-                                              <p>....</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  
-                              </div>
-                              
-                          </div>
-                      </div>
+                                  </div>   
+							  
                   </div>
               </div>
-                        
-              
+
           </div> <!-- Content -->
           
-          <div id="footer"><!-- Footer -->
+          
+      <div id="footer"><!-- Footer -->
               <div class="footer-widget">
                   <div class="container">
                       <div class="row">
@@ -508,45 +364,10 @@ $test2=	 mysqli_query($conn, $fc2);
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.raty.js"></script>
     <script src="js/ui.js"></script>
+    <script src="js/jquery.raty.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.selectbox-0.2.js"></script>
     <script src="js/theme-script.js"></script>
-	
-	<script>
-	
-	function p1(img){
-	// Get the modal
-	var modal = document.getElementById('myModal');
-	
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-	var bt = document.getElementById('t');
-	//var img = document.getElementById('img');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-
-
-    modal.style.display = "block";
-    modalImg.src = img;
-    //modalImg.alt = altt;
-	
-	modalImg.style.height='1000px';
-    modalImg.style.width='1000px';
-   // captionText.innerHTML = altt;
-	
-	
-	// When the user clicks on <span> (x), close the modal
-	modal.onclick = function() {
-    img01.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img01.className = "modal-content";
-     }, 400);
-	}
-	}
-	
-	</script>
-	
   </body>
 </html>
